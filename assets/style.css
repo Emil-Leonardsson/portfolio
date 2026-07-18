@@ -270,3 +270,12 @@
 .book-dots{display:flex; gap:6px;}
 .book-dots span{width:6px; height:6px; border-radius:50%; background:var(--line); cursor:pointer;}
 .book-dots span.active{background:var(--teal);}
+
+/* ---------- Klickbara kurser/certifieringar i plain-list ---------- */
+.plain-list a{display:block;}
+.plain-list a:hover b{text-decoration:underline; color:var(--teal);}
+
+/* ---------- Klickbara certifieringskort ---------- */
+.cert-card{display:block; text-decoration:none; color:inherit; transition:border-color .15s ease, transform .15s ease;}
+.cert-card:hover{border-color:var(--teal); transform:translateY(-2px);}
+.cert-card:hover h4{color:var(--teal);}
