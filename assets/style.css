@@ -250,3 +250,23 @@
 .lightbox-nav:hover{background:rgba(255,255,255,.22);}
 .lightbox-prev{left:24px;}
 .lightbox-next{right:24px;}
+
+/* ---------- Läshörnan: bokomslag + sidbläddring ---------- */
+.list-row{display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line);}
+.list-row:first-of-type{border-top:none;}
+.list-row img{width:56px; height:56px; object-fit:cover; border-radius:6px; border:1px solid var(--line); flex-shrink:0;}
+.list-row b{display:block; font-size:14.5px;}
+.list-row span{display:block; font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
+.list-row p{font-size:12.5px; color:var(--ink-soft); margin:6px 0 0; font-style:italic;}
+
+.book-page{display:none;}
+.book-page.active{display:block;}
+.book-pages-nav{display:flex; align-items:center; justify-content:space-between; margin-top:16px;}
+.book-nav-btn{
+  background:none; border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:13px;
+  font-weight:600; color:var(--ink-soft); cursor:pointer;
+}
+.book-nav-btn:hover{border-color:var(--ink); color:var(--ink);}
+.book-dots{display:flex; gap:6px;}
+.book-dots span{width:6px; height:6px; border-radius:50%; background:var(--line); cursor:pointer;}
+.book-dots span.active{background:var(--teal);}

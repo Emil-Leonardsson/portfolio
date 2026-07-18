@@ -57,4 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('click', () => openLightbox(images, current));
     });
   });
+
+  // Läshörnan: sidbläddring för "Lästa"-listan
+  document.querySelectorAll('.read-col').forEach(col => {
+    const pages = Array.from(col.querySelectorAll('.book-page'));
+    if (pages.length === 0) return;
+    const dots = Array.from(col.querySelectorAll('.book-dots span'));
+    const prevBtn = col.querySelector('.book-prev');
+    const nextBtn = col.querySelector('.book-next');
+    let current = 0;
+
+    function show(index){
+      current = (index + pages.length) % pages.length;
+      pages.forEach((page, i) => page.classList.toggle('active', i === current));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+    }
+    if (prevBtn) prevBtn.addEventListener('click', () => show(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => show(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+  });
 });
