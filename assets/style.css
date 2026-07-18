@@ -255,7 +255,7 @@
 .list-row{display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line);}
 .list-row:first-of-type{border-top:none;}
 .list-row img{width:56px; height:56px; object-fit:cover; border-radius:6px; border:1px solid var(--line); flex-shrink:0;}
-.list-row b{display:block; font-size:14.5px;}
+.list-row > div > b{display:block; font-size:14.5px;}
 .list-row span{display:block; font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
 .list-row p{font-size:12.5px; color:var(--ink-soft); margin:6px 0 0; font-style:italic;}
 
