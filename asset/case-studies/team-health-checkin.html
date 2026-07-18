@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Health Check-In — Case Study | Emil Leonardsson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
 
+<header class="hero" style="padding-bottom:0;">
+  <div class="wrap">
+    <a class="backlink" href="../index.html">&larr; Tillbaka till portfolion</a>
+    <div class="eyebrow">Case study &middot; Eget produktbygge</div>
+    <h1 style="max-width:22ch;">Team Health Check-In</h1>
+    <p class="hero-sub">
+      En webbaserad enkätapp som låter team anonymt checka in kring samarbete, arbetstempo och stämning,
+      och ger team-admins en dashboard med trender över tid. Byggd och specificerad helt av mig, från
+      produktkrav till datamodell till kod.
+    </p>
+    <div class="meta-row">
+      <span class="meta-pill"><b>Min roll:</b> Produktägare & byggare (solo)</span>
+      <span class="meta-pill"><b>Stack:</b> React, TypeScript, Tailwind</span>
+      <span class="meta-pill"><b>Backend:</b> Bolt Database (Postgres, Auth, Edge Functions)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ÖVERSIKT ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Vad appen gör</h2></div>
+    <p class="section-intro">
+      Teammedlemmar svarar anonymt på tre korta frågor om samarbete, arbetstempo och stämning via en unik
+      teamlänk, utan inloggning. Team-admins får en dashboard med genomsnittsvärden, en trendgraf över tid
+      och de senaste kommentarerna. En superadmin-vy styr en enkel premium/gratis-modell och en global
+      annons-kill-switch.
+    </p>
+    <div class="skill-row" style="margin-top:20px;">
+      <span class="skill-chip">Anonym datainsamling</span>
+      <span class="skill-chip">Trendvisualisering</span>
+      <span class="skill-chip">Rollbaserad åtkomst (RLS)</span>
+      <span class="skill-chip">Flerspråkigt (5 språk)</span>
+      <span class="skill-chip">Hybrid annonsmodell</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MIN ROLL ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>Varför jag byggde den</h2></div>
+    <p class="section-intro">
+      Jag ville se om jag kunde ta samma produkttänk jag använder som Product Owner, tydliga roller,
+      medvetna avgränsningar, en dokumenterad datamodell och en prioriterad backlog, och driva det
+      själv från idé till fungerande produkt. Det här dokumentet är min faktiska produktspecifikation,
+      inte efterhandskonstruerad, den skrevs för att styra byggarbetet.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ROLLER ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Roller i produkten</h2></div>
+    <p class="section-intro">Tre tydligt avgränsade roller, en klassisk grund för att hålla behörigheter och flöden enkla.</p>
+    <table class="role-table">
+      <tr><th>Roll</th><th>Beskrivning</th></tr>
+      <tr><td>Slutanvändare</td><td>Svarar via en unik teamlänk. Ingen inloggning krävs, svaren är helt anonyma, inget användar-ID kopplas till svaret.</td></tr>
+      <tr><td>Team-admin</td><td>Skapar konto, får automatiskt ett team kopplat till sig, ser dashboard med resultat för sitt eget team och kan dela teamlänken.</td></tr>
+      <tr><td>Superadmin</td><td>Intern vy för att sätta premium-status per team och styra en global annons-kill-switch, åtkomst styrd via en allowlist-tabell.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= FLÖDEN ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>Kärnflöden</h2></div>
+    <ul class="flow-list">
+      <li><span class="n">01</span><div><b>Check-in</b>Tre frågor i taget, 5-gradig skala, valfri fritextkommentar. Skicka-knappen aktiveras först när alla tre är besvarade.</div></li>
+      <li><span class="n">02</span><div><b>Bekräftelse & trend</b>Efter inskick ser deltagaren en trendgraf över teamets historik, samma grafkomponent som i admin-vyn, för att ge något tillbaka direkt.</div></li>
+      <li><span class="n">03</span><div><b>Admin-dashboard</b>Genomsnitt per kategori, trendgraf, de 8 senaste kommentarerna, och ett tomt tillstånd med tydlig call-to-action när inga svar finns än.</div></li>
+      <li><span class="n">04</span><div><b>Superadmin</b>Global annons-toggle och premium-status per team, allt skrivskyddat bakom en Edge Function med service-roll.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= DATAMODELL ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Datamodell & säkerhet</h2></div>
+    <table class="role-table">
+      <tr><th>Entitet</th><th>Beskrivning</th></tr>
+      <tr><td>Team</td><td>id, name, slug (unik), admin_user_id, is_premium, created_at. Ett team ägs av en admin och har många check-ins.</td></tr>
+      <tr><td>Health Check</td><td>collaboration, pace, morale (1–5), valfri kommentar. Inget användar-ID sparas, helt anonymt.</td></tr>
+      <tr><td>Settings</td><td>Global inställning (ads_enabled), en rad, läsbar för alla, skrivbar endast via service role.</td></tr>
+      <tr><td>Superadmins</td><td>Allowlist med e-postadresser som styr åtkomst till superadmin-vyn.</td></tr>
+    </table>
+    <p class="section-intro" style="margin-top:20px;">
+      Row Level Security är aktiverat på alla tabeller. En databas-trigger (guard_is_premium_update)
+      förhindrar att en team-admin själv kan sätta sitt eget team till premium, en medveten spärr mot
+      att kringgå affärsmodellen.
+    </p>
+  </div>
+</section>
+
+<!-- ================= BACKLOG ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>Så prioriterar jag</h2></div>
+    <p class="section-intro">
+      Precis som i en riktig backlog är det här medvetna vägval, inte saker jag glömde. Varje begränsning
+      nedan var ett beslut om vad som INTE var viktigast att bygga först.
+    </p>
+    <div class="split-two">
+      <div class="split-col">
+        <h4>Kända begränsningar (medvetna vägval)</h4>
+        <div class="split-item"><b>Ingen betallogik</b><span>Premium sätts manuellt av superadmin. Ingen Stripe-integration ännu, inte värt komplexiteten före produkten var validerad.</span></div>
+        <div class="split-item"><b>Ingen spärr mot flera check-ins/dag</b><span>Svaren är anonyma, så en spärr kräver cookie- eller IP-baserad deduplicering, en avvägning mot enkelhet jag valde bort tidigt.</span></div>
+        <div class="split-item"><b>Språkval sparas inte persistent</b><span>Återställs vid omladdning, låg påverkan på kärnupplevelsen.</span></div>
+        <div class="split-item"><b>Ingen dataexport</b><span>Inget CSV/PDF-flöde för rapportering ännu.</span></div>
+      </div>
+      <div class="split-col">
+        <h4>Nästa i backlogen</h4>
+        <div class="split-item"><b>Betalintegration</b><span>Stripe för självbetjänad premium-uppgradering.</span></div>
+        <div class="split-item"><b>Svarsfrekvens-begränsning</b><span>En check-in per person och dag, via cookie eller engångstoken i teamlänken.</span></div>
+        <div class="split-item"><b>Schemalagda påminnelser</b><span>Låt admin schemalägga veckovisa påminnelser till teamet.</span></div>
+        <div class="split-item"><b>Team-aggregering för organisationer</b><span>Stöd för flera team under en gemensam organisationsvy.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER / CTA ================= -->
+<footer>
+  <div class="wrap">
+    <h2>Vill du se fler exempel på mitt arbete?</h2>
+    <p>Den här sidan är ett av flera bevis på hur jag jobbar, som Product Owner, Scrum Master och Delivery Lead.</p>
+    <div class="foot-links">
+      <a class="btn btn-primary" href="../index.html#bevis">Tillbaka till Bevis-sektionen</a>
+      <a class="btn btn-ghost" href="../index.html#kontakt">Kontakta mig</a>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Emil Leonardsson</span>
+      <span>Team Health Check-In &middot; React + TypeScript + Bolt Database</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
