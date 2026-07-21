@@ -187,7 +187,7 @@
   /* ---------- KARRIÄR timeline ---------- */
   .timeline{margin-top:36px; border-left:2px solid var(--line); padding-left:32px; display:flex; flex-direction:column; gap:36px;}
   .tl-item{position:relative;}
-  .tl-item::before{content:""; position:absolute; left:-38.5px; top:4px; width:11px; height:11px; border-radius:50%; background:var(--teal); border:3px solid var(--paper);}
+  .tl-item::before{content:""; position:absolute; left:-38.5px; top:4px; width:11px; height:11px; border-radius:50%; background:var(--teal); border:3px solid var(--panel);}
   .tl-item .yr{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--teal); font-weight:600;}
   .tl-item h4{font-size:18px; margin-top:4px;}
   .tl-item .co{font-size:13.5px; color:var(--ink-soft); margin-top:2px;}
