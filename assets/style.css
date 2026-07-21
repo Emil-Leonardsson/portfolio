@@ -91,7 +91,7 @@
   @media (max-width:760px){ .facts{grid-template-columns:1fr 1fr;} }
 
   /* ---------- SECTION shell ---------- */
-  section{padding:84px 0;}
+  section{padding:42px 0;}
   .section-head{margin-bottom:14px; display:flex; flex-wrap:nowrap; align-items:baseline; justify-content:flex-start; gap:16px;}
   .section-head h2{font-size:clamp(26px,3.2vw,34px); min-width:0;}
   @media (max-width:600px){.section-head{flex-wrap:wrap;}}
