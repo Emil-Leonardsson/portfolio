@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Health Check-In — Case Study | Emil Leonardsson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="hero" style="padding-bottom:0;">
+  <div class="wrap">
+    <a class="backlink" href="../../en/index.html#bevis">&larr; Back to the portfolio</a>
+    <div class="eyebrow">Case study &middot; Own product build</div>
+    <h1 style="max-width:22ch;">Team Health Check-In</h1>
+    <p class="hero-sub">
+      A web-based survey app that lets teams anonymously check in on collaboration, pace and morale,
+      and gives team admins a dashboard with trends over time. Built and specified entirely by me, from
+      product requirements to data model to code.
+    </p>
+    <div class="meta-row">
+      <span class="meta-pill"><b>My role:</b> Product owner & builder (solo)</span>
+      <span class="meta-pill"><b>Stack:</b> React, TypeScript, Tailwind</span>
+      <span class="meta-pill"><b>Backend:</b> Bolt Database (Postgres, Auth, Edge Functions)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>What the app does</h2></div>
+    <p class="section-intro">
+      Team members anonymously answer three short questions about collaboration, pace and morale via a unique
+      team link, no login required. Team admins get a dashboard with average scores, a trend chart over time
+      and the latest comments. A superadmin view controls a simple premium/free model and a global
+      ad kill switch.
+    </p>
+    <div class="skill-row" style="margin-top:20px;">
+      <span class="skill-chip">Anonymous data collection</span>
+      <span class="skill-chip">Trend visualization</span>
+      <span class="skill-chip">Role-based access (RLS)</span>
+      <span class="skill-chip">Multilingual (5 languages)</span>
+      <span class="skill-chip">Hybrid ad model</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>Why I built it</h2></div>
+    <p class="section-intro">
+      I wanted to see if I could take the same product thinking I use as a Product Owner, clear roles,
+      deliberate scope boundaries, a documented data model and a prioritized backlog, and drive it
+      myself from idea to working product.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ROLES ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Roles in the product</h2></div>
+    <p class="section-intro">Three clearly scoped roles, a classic foundation for keeping permissions and flows simple.</p>
+    <table class="role-table">
+      <tr><th>Role</th><th>Description</th></tr>
+      <tr><td>End user</td><td>Responds via a unique team link. No login required, answers are fully anonymous, no user ID is linked to the response.</td></tr>
+      <tr><td>Team admin</td><td>Creates an account, automatically gets a team linked to them, sees a dashboard with results for their own team and can share the team link.</td></tr>
+      <tr><td>Superadmin</td><td>Internal view for setting premium status per team and controlling a global ad kill switch, access controlled via an allowlist table.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= FLOWS ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>Core flows</h2></div>
+    <ul class="flow-list">
+      <li><span class="n">01</span><div><b>Check-in</b>Three questions at a time, 5-point scale, optional free-text comment. The submit button only activates once all three are answered.</div></li>
+      <li><span class="n">02</span><div><b>Confirmation & trend</b>After submitting, the participant sees a trend chart of the team's history, the same chart component as in the admin view, to give something back immediately.</div></li>
+      <li><span class="n">03</span><div><b>Admin dashboard</b>Averages per category, trend chart, the 8 latest comments, and an empty state with a clear call-to-action when no responses exist yet.</div></li>
+      <li><span class="n">04</span><div><b>Superadmin</b>Global ad toggle and per-team premium status, all locked behind an Edge Function with a service role.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= DATA MODEL ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Data model & security</h2></div>
+    <table class="role-table">
+      <tr><th>Entity</th><th>Description</th></tr>
+      <tr><td>Team</td><td>id, name, slug (unique), admin_user_id, is_premium, created_at. A team is owned by one admin and has many check-ins.</td></tr>
+      <tr><td>Health Check</td><td>collaboration, pace, morale (1–5), optional comment. No user ID is stored, fully anonymous.</td></tr>
+      <tr><td>Settings</td><td>Global setting (ads_enabled), one row, readable by everyone, writable only via service role.</td></tr>
+      <tr><td>Superadmins</td><td>Allowlist of email addresses controlling access to the superadmin view.</td></tr>
+    </table>
+    <p class="section-intro" style="margin-top:20px;">
+      Row Level Security is enabled on all tables. A database trigger (guard_is_premium_update)
+      prevents a team admin from setting their own team to premium, a deliberate safeguard against
+      circumventing the business model.
+    </p>
+  </div>
+</section>
+
+<!-- ================= BACKLOG ================= -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head"><h2>How I prioritize</h2></div>
+    <p class="section-intro">
+      Just like in a real backlog, these are deliberate trade-offs, not things I forgot. Every constraint
+      below was a decision about what was NOT the most important thing to build first.
+    </p>
+    <div class="split-two">
+      <div class="split-col">
+        <h4>Known constraints (deliberate trade-offs)</h4>
+        <div class="split-item"><b>No payment logic</b><span>Premium is set manually by the superadmin. No Stripe integration yet, not worth the complexity before the product was validated.</span></div>
+        <div class="split-item"><b>No limit on multiple check-ins/day</b><span>Responses are anonymous, so a limit would require cookie- or IP-based deduplication, a trade-off against simplicity I chose to skip early on.</span></div>
+        <div class="split-item"><b>Language choice isn't persisted</b><span>Resets on reload, low impact on the core experience.</span></div>
+        <div class="split-item"><b>No data export</b><span>No CSV/PDF flow for reporting yet.</span></div>
+      </div>
+      <div class="split-col">
+        <h4>Next in the backlog</h4>
+        <div class="split-item"><b>Payment integration</b><span>Stripe for self-service premium upgrades.</span></div>
+        <div class="split-item"><b>Response rate limiting</b><span>One check-in per person per day, via cookie or one-time token in the team link.</span></div>
+        <div class="split-item"><b>Scheduled reminders</b><span>Let admins schedule weekly reminders to the team.</span></div>
+        <div class="split-item"><b>Team aggregation for organizations</b><span>Support for multiple teams under a shared organization view.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER / CTA ================= -->
+<footer>
+  <div class="wrap">
+    <h2>Want to see more examples of my work?</h2>
+    <p>This page is one of several pieces of evidence for how I work, as a Product Owner, Scrum Master and Delivery Lead.</p>
+    <div class="foot-links">
+      <a class="btn btn-primary" href="../../en/index.html#bevis">Back to the My work section</a>
+      <a class="btn btn-ghost" href="../../en/index.html#kontakt">Contact me</a>
+    </div>
+    <div class="foot-bottom">
+      <span>Built 2026 by Emil Leonardsson with Claude and Copilot</span>
+      <span>Team Health Check-In &middot; React + TypeScript + Bolt Database</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

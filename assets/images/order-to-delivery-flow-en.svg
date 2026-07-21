@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1890" height="992" viewBox="0 0 1890 992">
+<rect width="1890" height="992" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1890" height="8" fill="#2F6F62"/>
+<text x="30" y="42" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#5B6A6A">PROCESS FLOW</text>
+<text x="30" y="72" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1E2A32">Order-to-delivery flow</text>
+
+<rect x="190" y="126" width="280" height="38" fill="#2F6F62"/>
+<text x="330.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 1</text>
+<text x="330.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Order initiated</text>
+<rect x="470" y="126" width="280" height="38" fill="#26594E"/>
+<text x="610.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 2</text>
+<text x="610.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Review &amp; decision</text>
+<rect x="750" y="126" width="280" height="38" fill="#2F6F62"/>
+<text x="890.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 3</text>
+<text x="890.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Estimation &amp; quote</text>
+<rect x="1030" y="126" width="280" height="38" fill="#26594E"/>
+<text x="1170.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 4</text>
+<text x="1170.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Planning &amp; implementation</text>
+<rect x="1310" y="126" width="280" height="38" fill="#2F6F62"/>
+<text x="1450.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 5</text>
+<text x="1450.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Delivery &amp; acceptance</text>
+<rect x="1590" y="126" width="280" height="38" fill="#26594E"/>
+<text x="1730.0" y="142" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" fill="#CFE3DC" text-anchor="middle">PHASE 6</text>
+<text x="1730.0" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Closure &amp; finance</text>
+
+<rect x="0" y="164" width="1890" height="128" fill="#F7F8F5"/>
+<rect x="0" y="164" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="233.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">Customer</tspan>
+</text>
+<rect x="0" y="292" width="1890" height="128" fill="#FFFFFF"/>
+<rect x="0" y="292" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="361.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">Support</tspan>
+</text>
+<rect x="0" y="420" width="1890" height="128" fill="#F7F8F5"/>
+<rect x="0" y="420" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="489.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">CSM</tspan>
+</text>
+<rect x="0" y="548" width="1890" height="128" fill="#FFFFFF"/>
+<rect x="0" y="548" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="617.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">PO</tspan>
+</text>
+<rect x="0" y="676" width="1890" height="128" fill="#F7F8F5"/>
+<rect x="0" y="676" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="745.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">Dev Team /</tspan>
+<tspan x="16" dy="18">Architect</tspan>
+</text>
+<rect x="0" y="804" width="1890" height="128" fill="#FFFFFF"/>
+<rect x="0" y="804" width="190" height="128" fill="#E4EEEA"/>
+<text x="16" y="873.0" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E2A32">
+<tspan x="16" dy="0">Delivery Team</tspan>
+</text>
+<line x1="190" y1="126" x2="190" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="470" y1="126" x2="470" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="750" y1="126" x2="750" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="1030" y1="126" x2="1030" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="1310" y1="126" x2="1310" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="1590" y1="126" x2="1590" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="1870" y1="126" x2="1870" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="164" x2="1890" y2="164" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="292" x2="1890" y2="292" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="420" x2="1890" y2="420" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="548" x2="1890" y2="548" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="676" x2="1890" y2="676" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="804" x2="1890" y2="804" stroke="#DCDFD5" stroke-width="1"/>
+<line x1="0" y1="932" x2="1890" y2="932" stroke="#DCDFD5" stroke-width="1"/>
+
+<rect x="204" y="188" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="214" y="205" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="214" dy="0">1. Creates order in SNOW</tspan>
+</text>
+<rect x="204" y="316" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="214" y="333" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="214" dy="0">2. Receives the ticket</tspan>
+</text>
+<rect x="204" y="355" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="214" y="372" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="214" dy="0">3. Checks template/info</tspan>
+</text>
+<rect x="204" y="394" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="214" y="411" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="214" dy="0">5. Imports to ADO</tspan>
+</text>
+<rect x="204" y="433" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="214" y="450" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="214" dy="0">6. Assigns to CSM</tspan>
+</text>
+<rect x="484" y="444" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="494" y="461" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="494" dy="0">7. Reviews, places in CAB</tspan>
+<tspan x="494" dy="14">New</tspan>
+</text>
+<rect x="484" y="572" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="494" y="589" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="494" dy="0">8. Decides: proceed with order</tspan>
+<tspan x="494" dy="14">or not</tspan>
+</text>
+<rect x="484" y="626" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="494" y="643" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="494" dy="0">10. If yes: initiates</tspan>
+<tspan x="494" dy="14">estimation + solution</tspan>
+</text>
+<rect x="764" y="700" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="717" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">11. Develops solution proposal +</tspan>
+<tspan x="774" dy="14">estimate</tspan>
+</text>
+<rect x="764" y="572" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="589" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">12. Sends materials to CSM</tspan>
+</text>
+<rect x="764" y="424" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="441" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">13. Creates quote</tspan>
+</text>
+<rect x="764" y="611" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="628" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">14. Reviews &amp; signs quote</tspan>
+</text>
+<rect x="764" y="463" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="480" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">16. Presents quote to</tspan>
+<tspan x="774" dy="14">customer</tspan>
+</text>
+<rect x="764" y="517" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="534" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">18. Informs PO</tspan>
+</text>
+<rect x="764" y="188" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="774" y="205" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="774" dy="0">17. Signs quote</tspan>
+</text>
+<rect x="1044" y="572" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1054" y="589" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1054" dy="0">19. Creates</tspan>
+<tspan x="1054" dy="14">implementation story in ADO</tspan>
+</text>
+<rect x="1044" y="626" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1054" y="643" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1054" dy="0">20. Schedules story into</tspan>
+<tspan x="1054" dy="14">release</tspan>
+</text>
+<rect x="1044" y="700" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1054" y="717" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1054" dy="0">21. Pulls work from backlog</tspan>
+</text>
+<rect x="1044" y="739" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1054" y="756" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1054" dy="0">22. Carries out implementation</tspan>
+</text>
+<rect x="1044" y="778" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1054" y="795" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1054" dy="0">23. Creates delivery</tspan>
+</text>
+<rect x="1324" y="444" width="252" height="46" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1334" y="461" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1334" dy="0">24. Coordinates delivery</tspan>
+<tspan x="1334" dy="14">with customer</tspan>
+</text>
+<rect x="1324" y="828" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1334" y="845" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1334" dy="0">25. Delivers to customer test</tspan>
+</text>
+<rect x="1324" y="867" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1334" y="884" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1334" dy="0">27. Delivers to production</tspan>
+</text>
+<rect x="1324" y="188" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1334" y="205" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1334" dy="0">26. Acceptance test &amp; approves</tspan>
+</text>
+<rect x="1324" y="227" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1334" y="244" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1334" dy="0">28. Approves final delivery</tspan>
+</text>
+<rect x="1604" y="316" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1614" y="333" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1614" dy="0">29. Closes SNOW ticket</tspan>
+</text>
+<rect x="1604" y="444" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1614" y="461" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1614" dy="0">30. Creates invoice</tspan>
+</text>
+<rect x="1604" y="483" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1614" y="500" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1614" dy="0">31. Updates service contract</tspan>
+</text>
+<rect x="1604" y="522" width="252" height="31" rx="6" fill="#F7EDDA" stroke="#C98A2E" stroke-width="1"/>
+<text x="1614" y="539" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E2A32">
+<tspan x="1614" dy="0">32. Closes ADO story</tspan>
+</text>
+
+<defs><marker id="loopArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#B0413E"/></marker></defs>
+
+<path d="M204 355 L204 100 L456 100 L456 178" stroke="#B0413E" stroke-width="1.6" fill="none" stroke-dasharray="4,3" marker-end="url(#loopArrow)"/>
+<rect x="215.0" y="92" width="230" height="16" fill="#FFFFFF"/>
+<text x="330.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#B0413E" text-anchor="middle">4. Info missing, back to customer</text>
+
+<path d="M484 566 L484 100 L736 100 L736 168" stroke="#B0413E" stroke-width="1.6" fill="none" stroke-dasharray="4,3" marker-end="url(#loopArrow)"/>
+<rect x="495.0" y="92" width="230" height="16" fill="#FFFFFF"/>
+<text x="610.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#B0413E" text-anchor="middle">9. If no: CSM follows up with customer</text>
+
+<path d="M890 642 L890 700" stroke="#B0413E" stroke-width="1.6" fill="none" stroke-dasharray="4,3" marker-end="url(#loopArrow)"/>
+<rect x="774.0" y="650" width="230" height="16" fill="#FFFFFF"/>
+<text x="890.0" y="662" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#B0413E" text-anchor="middle">15. Not OK, back for revision</text>
+
+<text x="30" y="974" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5B6A6A">Emil Leonardsson · Process flow, SNOW → Azure DevOps · Red dashed arrows = return flows</text>
+</svg>

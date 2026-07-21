@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+  <rect width="1000" height="560" fill="#EEF0EA"/>
+
+  <text x="60" y="60" font-family="Georgia, serif" font-size="14" letter-spacing="2" fill="#5B6A6A">COACHING FRAMEWORK</text>
+  <text x="60" y="100" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1E2A32">The GROW model</text>
+  <text x="60" y="128" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#5B6A6A">How I structure my 1-on-1s</text>
+
+  <!-- Cards -->
+  <!-- Goal -->
+  <rect x="60" y="180" width="200" height="230" rx="14" fill="#FFFFFF" stroke="#DCDFD5" stroke-width="1.5"/>
+  <rect x="60" y="180" width="200" height="8" rx="4" fill="#2F6F62"/>
+  <text x="90" y="230" font-family="IBM Plex Mono, Consolas, monospace" font-size="12" fill="#2F6F62">01</text>
+  <text x="90" y="260" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1E2A32">Goal</text>
+  <text x="90" y="284" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5B6A6A">What to achieve</text>
+  <text x="90" y="320" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1E2A32">
+    <tspan x="90" dy="0">"What do you want</tspan>
+    <tspan x="90" dy="18">to get from this</tspan>
+    <tspan x="90" dy="18">conversation?"</tspan>
+  </text>
+
+  <!-- Reality -->
+  <rect x="300" y="180" width="200" height="230" rx="14" fill="#FFFFFF" stroke="#DCDFD5" stroke-width="1.5"/>
+  <rect x="300" y="180" width="200" height="8" rx="4" fill="#2F6F62"/>
+  <text x="330" y="230" font-family="IBM Plex Mono, Consolas, monospace" font-size="12" fill="#2F6F62">02</text>
+  <text x="330" y="260" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1E2A32">Reality</text>
+  <text x="330" y="284" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5B6A6A">Where things stand</text>
+  <text x="330" y="320" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1E2A32">
+    <tspan x="330" dy="0">"Where do you</tspan>
+    <tspan x="330" dy="18">honestly stand</tspan>
+    <tspan x="330" dy="18">today?"</tspan>
+  </text>
+
+  <!-- Options -->
+  <rect x="540" y="180" width="200" height="230" rx="14" fill="#FFFFFF" stroke="#DCDFD5" stroke-width="1.5"/>
+  <rect x="540" y="180" width="200" height="8" rx="4" fill="#C98A2E"/>
+  <text x="570" y="230" font-family="IBM Plex Mono, Consolas, monospace" font-size="12" fill="#C98A2E">03</text>
+  <text x="570" y="260" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1E2A32">Options</text>
+  <text x="570" y="284" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5B6A6A">What's possible</text>
+  <text x="570" y="320" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1E2A32">
+    <tspan x="570" dy="0">"What paths</tspan>
+    <tspan x="570" dy="18">forward exist,</tspan>
+    <tspan x="570" dy="18">without judging?"</tspan>
+  </text>
+
+  <!-- Will -->
+  <rect x="780" y="180" width="200" height="230" rx="14" fill="#FFFFFF" stroke="#DCDFD5" stroke-width="1.5"/>
+  <rect x="780" y="180" width="200" height="8" rx="4" fill="#C98A2E"/>
+  <text x="810" y="230" font-family="IBM Plex Mono, Consolas, monospace" font-size="12" fill="#C98A2E">04</text>
+  <text x="810" y="260" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1E2A32">Will</text>
+  <text x="810" y="284" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5B6A6A">The commitment</text>
+  <text x="810" y="320" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1E2A32">
+    <tspan x="810" dy="0">"What will you</tspan>
+    <tspan x="810" dy="18">do, and by</tspan>
+    <tspan x="810" dy="18">when?"</tspan>
+  </text>
+
+  <!-- Arrows between cards -->
+  <path d="M264 295 L296 295" stroke="#5B6A6A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M504 295 L536 295" stroke="#5B6A6A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M744 295 L776 295" stroke="#5B6A6A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Return loop arrow from Will back to Goal (ongoing coaching cycle) -->
+  <path d="M880 410 L880 460 L160 460 L160 412" stroke="#C98A2E" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowgold)"/>
+  <text x="500" y="495" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#C98A2E" text-anchor="middle">Next 1-on-1: follow up on the commitment, start again from Goal</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5B6A6A"/>
+    </marker>
+    <marker id="arrowgold" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#C98A2E"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="540" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5B6A6A">Emil Leonardsson · Coaching framework for 1-on-1s</text>
+</svg>
