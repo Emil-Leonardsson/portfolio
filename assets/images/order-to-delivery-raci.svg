@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="910" height="838" viewBox="0 0 910 838">
+  <rect width="910" height="838" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="910" height="8" fill="#2F6F62"/>
+
+  <text x="30" y="42" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#5B6A6A">RACI-MODELL</text>
+  <text x="30" y="72" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1E2A32">Order-till-leverans-flödet</text>
+  <text x="30" y="96" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5B6A6A">Ansvarsfördelning per steg, kopplad till processflödet</text>
+
+  <rect x="0" y="120" width="260" height="36" fill="#2F6F62"/>
+  <text x="16" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">STEG</text>
+
+  <rect x="260" y="120" width="130" height="36" fill="#2F6F62"/>
+  <text x="325.0" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">PO</text>
+
+  <rect x="390" y="120" width="130" height="36" fill="#2F6F62"/>
+  <text x="455.0" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">CSM</text>
+
+  <rect x="520" y="120" width="130" height="36" fill="#2F6F62"/>
+  <text x="585.0" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Dev Team</text>
+
+  <rect x="650" y="120" width="130" height="36" fill="#2F6F62"/>
+  <text x="715.0" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Support</text>
+
+  <rect x="780" y="120" width="130" height="36" fill="#2F6F62"/>
+  <text x="845.0" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Leverans Team</text>
+
+  <rect x="0" y="156" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Beställning tas emot</text>
+  <circle cx="325.0" cy="179.0" r="15" fill="#A9C3BC" opacity="0.15"/>
+  <text x="325.0" y="184.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#A9C3BC" text-anchor="middle">I</text>
+  <circle cx="455.0" cy="179.0" r="15" fill="#2F6F62" opacity="0.15"/>
+  <text x="455.0" y="184.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2F6F62" text-anchor="middle">R</text>
+  <text x="585.0" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="715.0" cy="179.0" r="15" fill="#C98A2E" opacity="0.15"/>
+  <text x="715.0" y="184.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#C98A2E" text-anchor="middle">A</text>
+  <text x="845.0" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="202" width="910" height="46" fill="#FFFFFF"/>
+  <text x="16" y="230.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Kontroll av beställningsinfo</text>
+  <text x="325.0" y="230.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="455.0" y="230.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="585.0" y="230.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="715.0" cy="225.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="715.0" y="230.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="845.0" y="230.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="248" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="276.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">CAB-granskning</text>
+  <text x="325.0" y="276.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="455.0" cy="271.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="455.0" y="276.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="585.0" y="276.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="276.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="276.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="294" width="910" height="46" fill="#FFFFFF"/>
+  <text x="16" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Beslut om beställning</text>
+  <circle cx="325.0" cy="317.0" r="15" fill="#C98A2E" opacity="0.15"/>
+  <text x="325.0" y="322.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#C98A2E" text-anchor="middle">A</text>
+  <circle cx="455.0" cy="317.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="455.0" y="322.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <text x="585.0" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="340" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="368.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Estimering &amp; lösning</text>
+  <circle cx="325.0" cy="363.0" r="15" fill="#C98A2E" opacity="0.15"/>
+  <text x="325.0" y="368.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#C98A2E" text-anchor="middle">A</text>
+  <circle cx="455.0" cy="363.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="455.0" y="368.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <circle cx="585.0" cy="363.0" r="15" fill="#2F6F62" opacity="0.15"/>
+  <text x="585.0" y="368.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2F6F62" text-anchor="middle">R</text>
+  <text x="715.0" y="368.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="368.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="386" width="910" height="46" fill="#FFFFFF"/>
+  <text x="16" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Offert</text>
+  <circle cx="325.0" cy="409.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="325.0" y="414.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <circle cx="455.0" cy="409.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="455.0" y="414.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="585.0" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="432" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="460.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Kunddialog</text>
+  <text x="325.0" y="460.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="455.0" cy="455.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="455.0" y="460.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="585.0" y="460.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="460.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="460.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="478" width="910" height="46" fill="#FFFFFF"/>
+  <text x="16" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Planering &amp; release</text>
+  <circle cx="325.0" cy="501.0" r="15" fill="#C98A2E" opacity="0.15"/>
+  <text x="325.0" y="506.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#C98A2E" text-anchor="middle">A</text>
+  <circle cx="455.0" cy="501.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="455.0" y="506.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <text x="585.0" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="524" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="552.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Implementation</text>
+  <circle cx="325.0" cy="547.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="325.0" y="552.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <text x="455.0" y="552.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="585.0" cy="547.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="585.0" y="552.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="715.0" y="552.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="845.0" y="552.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <rect x="0" y="570" width="910" height="46" fill="#FFFFFF"/>
+  <text x="16" y="598.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Leverans &amp; acceptans</text>
+  <circle cx="325.0" cy="593.0" r="15" fill="#5B6A6A" opacity="0.15"/>
+  <text x="325.0" y="598.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <circle cx="455.0" cy="593.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="455.0" y="598.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="585.0" y="598.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <text x="715.0" y="598.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="845.0" cy="593.0" r="15" fill="#2F6F62" opacity="0.15"/>
+  <text x="845.0" y="598.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2F6F62" text-anchor="middle">R</text>
+
+  <rect x="0" y="616" width="910" height="46" fill="#F7F8F5"/>
+  <text x="16" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E2A32">Avslut &amp; fakturering</text>
+  <text x="325.0" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="455.0" cy="639.0" r="19" fill="#8A5DAB" opacity="0.15"/>
+  <text x="455.0" y="644.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="585.0" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+  <circle cx="715.0" cy="639.0" r="15" fill="#2F6F62" opacity="0.15"/>
+  <text x="715.0" y="644.0" font-family="IBM Plex Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2F6F62" text-anchor="middle">R</text>
+  <text x="845.0" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#DCDFD5" text-anchor="middle">–</text>
+
+  <line x1="0" y1="156" x2="910" y2="156" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="202" x2="910" y2="202" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="248" x2="910" y2="248" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="294" x2="910" y2="294" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="340" x2="910" y2="340" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="386" x2="910" y2="386" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="432" x2="910" y2="432" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="478" x2="910" y2="478" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="524" x2="910" y2="524" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="570" x2="910" y2="570" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="616" x2="910" y2="616" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="662" x2="910" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+
+  <line x1="260" y1="120" x2="260" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="390" y1="120" x2="390" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="520" y1="120" x2="520" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="650" y1="120" x2="650" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="780" y1="120" x2="780" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="0" y1="120" x2="0" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+  <line x1="910" y1="120" x2="910" y2="662" stroke="#DCDFD5" stroke-width="1"/>
+
+  <text x="30" y="688" font-family="IBM Plex Mono, Consolas, monospace" font-size="11" letter-spacing="1" fill="#5B6A6A">TECKENFÖRKLARING</text>
+
+  <circle cx="40" cy="716" r="12" fill="#C98A2E" opacity="0.15"/>
+  <text x="40" y="720" font-family="IBM Plex Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#C98A2E" text-anchor="middle">A</text>
+  <text x="58" y="720" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1E2A32">Accountable</text>
+
+  <circle cx="161.3" cy="716" r="12" fill="#2F6F62" opacity="0.15"/>
+  <text x="161.3" y="720" font-family="IBM Plex Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#2F6F62" text-anchor="middle">R</text>
+  <text x="179.3" y="720" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1E2A32">Responsible</text>
+
+  <circle cx="282.6" cy="716" r="12" fill="#8A5DAB" opacity="0.15"/>
+  <text x="282.6" y="720" font-family="IBM Plex Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#8A5DAB" text-anchor="middle">A/R</text>
+  <text x="300.6" y="720" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1E2A32">Accountable &amp; Responsible</text>
+
+  <circle cx="492.1" cy="716" r="12" fill="#5B6A6A" opacity="0.15"/>
+  <text x="492.1" y="720" font-family="IBM Plex Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#5B6A6A" text-anchor="middle">C</text>
+  <text x="510.1" y="720" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1E2A32">Consulted</text>
+
+  <circle cx="600.8" cy="716" r="12" fill="#A9C3BC" opacity="0.15"/>
+  <text x="600.8" y="720" font-family="IBM Plex Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#A9C3BC" text-anchor="middle">I</text>
+  <text x="618.8" y="720" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1E2A32">Informed</text>
+
+  <line x1="30" y1="736" x2="880" y2="736" stroke="#DCDFD5" stroke-width="1"/>
+
+  <text x="30" y="756" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5B6A6A"><tspan font-weight="700" fill="#1E2A32">PO</tspan> Product Owner   ·   <tspan font-weight="700" fill="#1E2A32">CSM</tspan> Customer Success Manager   ·   <tspan font-weight="700" fill="#1E2A32">Dev Team</tspan> Utvecklingsteam</text>
+  <text x="30" y="774" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5B6A6A"><tspan font-weight="700" fill="#1E2A32">Support</tspan> Servicedesk/support-team   ·   <tspan font-weight="700" fill="#1E2A32">Leverans Team</tspan> Leveransteam</text>
+
+  <text x="30" y="812" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5B6A6A">Emil Leonardsson · RACI-modell, order-till-leverans</text>
+</svg>
