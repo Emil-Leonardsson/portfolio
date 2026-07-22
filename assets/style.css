@@ -63,6 +63,8 @@
   .hero{padding:38px 0 28px;}
   .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px; display:flex; align-items:center; gap:10px;}
   .eyebrow::before{content:""; width:22px; height:1px; background:var(--ink-soft); display:inline-block;}
+  .status-pill{display:inline-flex; align-items:center; gap:8px; background:var(--teal-soft); color:var(--teal); border:1px solid var(--teal); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:14px;}
+  .status-dot{width:7px; height:7px; border-radius:50%; background:var(--teal); flex-shrink:0;}
   .hero h1{font-size:clamp(32px,4.6vw,50px); max-width:17ch; line-height:1.12;}
   .hero h1 em{font-style:normal; color:var(--teal);}
   .hero-sub{font-size:18px; color:var(--ink-soft); max-width:56ch; margin:22px 0 8px;}
