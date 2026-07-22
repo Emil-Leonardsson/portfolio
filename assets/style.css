@@ -65,6 +65,8 @@
   .eyebrow::before{content:""; width:22px; height:1px; background:var(--ink-soft); display:inline-block;}
   .status-pill{display:inline-flex; align-items:center; gap:8px; background:var(--teal-soft); color:var(--teal); border:1px solid var(--teal); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:14px;}
   .status-dot{width:7px; height:7px; border-radius:50%; background:var(--teal); flex-shrink:0;}
+  .hero-status-row{display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin-bottom:18px;}
+  .hero-status-row .eyebrow, .hero-status-row .status-pill{margin-bottom:0;}
   .hero h1{font-size:clamp(32px,4.6vw,50px); max-width:17ch; line-height:1.12;}
   .hero h1 em{font-style:normal; color:var(--teal);}
   .hero-sub{font-size:18px; color:var(--ink-soft); max-width:56ch; margin:22px 0 8px;}
