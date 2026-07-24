@@ -75,11 +75,12 @@
   .hero-status-row{display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin-bottom:18px;}
   .hero-status-row .eyebrow, .hero-status-row .status-pill{margin-bottom:0;}
   .hero h1{font-size:clamp(32px,4.6vw,50px); line-height:1.12;}
-  .hero h1 em{font-style:normal; color:var(--teal);}
+  .hero h1 a{color:var(--teal); text-decoration:underline; text-decoration-color:var(--teal-soft); text-decoration-thickness:2px; text-underline-offset:5px;}
+  .hero h1 a:hover{text-decoration-color:var(--teal);}
   .hero-sub{font-size:18px; color:var(--ink-soft); margin:22px 0 8px;}
   .hero-sub a{color:var(--teal); font-weight:600; text-decoration:underline; text-decoration-color:var(--teal-soft); text-decoration-thickness:1.5px; text-underline-offset:3px;}
   .hero-sub a:hover{text-decoration-color:var(--teal);}
-  .hero-lead{font-size:18px; color:var(--ink); margin:0 0 8px;}
+  .hero-lead{font-size:18px; color:var(--ink-soft); margin:0 0 8px;}
 
   /* Role toggle — signature interactive element */
   .role-toggle{display:flex; gap:8px; margin:14px 0 20px; flex-wrap:wrap;}
