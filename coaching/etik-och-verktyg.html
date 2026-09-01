@@ -6,7 +6,7 @@
 <title>Etik, avtal & verktygslåda — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=6">
+<link rel="stylesheet" href="../assets/style.css?v=7">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -16,18 +16,20 @@
   <div class="wrap">
     <a class="brand" href="../index.html">Emil Leonardsson</a>
     <ul class="tab-links">
-      <li><a href="#" class="tab-link active" data-tab="etik">Etik som coach</a></li>
+      <li><a href="#" class="tab-link active" data-tab="hem">Hem</a></li>
+      <li><a href="#" class="tab-link" data-tab="etik">Etik som coach</a></li>
       <li><a href="#" class="tab-link" data-tab="avtal">Coachingavtal &amp; Alliance</a></li>
       <li><a href="#" class="tab-link" data-tab="verktygslada">Verktygslåda</a></li>
     </ul>
-    <a class="tab-lang" href="etik-och-verktyg-en.html">EN</a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <a class="tab-back" href="../index.html">&larr; Tillbaka</a>
+      <a class="tab-lang" href="etik-och-verktyg-en.html">EN</a>
+    </div>
   </div>
 </nav>
 
-<header class="hero" style="padding-bottom:0;">
+<section id="sec-hem" class="hero" style="padding-bottom:0;">
   <div class="wrap">
-    <a class="backlink" href="../index.html">&larr; Tillbaka till portfolion</a>
-    <div class="eyebrow">Coaching &middot; Etik, avtal &amp; verktyg</div>
     <h1 style="max-width:22ch;">Min coachingpraktik</h1>
     <p class="hero-sub">
       En sida om hur jag tänker och arbetar som coach: min etiska hållning, hur jag sätter upp
@@ -36,11 +38,9 @@
     </p>
     <div class="meta-row">
       <span class="meta-pill"><b>Roll:</b> Agile/Team Coach</span>
-      <span class="meta-pill"><b>Innehåll:</b> Etik, avtal &amp; övningar</span>
-      <span class="meta-pill"><b>Status:</b> Byggs successivt</span>
     </div>
   </div>
-</header>
+</section>
 
 <!-- ================= ETIK SOM COACH ================= -->
 <section id="sec-etik">
@@ -441,6 +441,7 @@
   renderRegister('');
 
   var tabSections = {
+    hem: document.getElementById('sec-hem'),
     etik: document.getElementById('sec-etik'),
     avtal: document.getElementById('sec-avtal'),
     verktygslada: document.getElementById('sec-verktygslada')
@@ -456,7 +457,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-  showTab('etik');
+  showTab('hem');
 </script>
 
 </body>

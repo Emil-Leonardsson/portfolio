@@ -68,6 +68,8 @@
   .tab-links a.active{color:var(--teal); font-weight:700;}
   .tab-lang{border:1px solid var(--line); color:var(--ink-soft); padding:7px 11px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
   .tab-lang:hover{border-color:var(--ink); color:var(--ink);}
+  .tab-back{font-size:13px; font-weight:600; color:var(--ink-soft); text-decoration:none; white-space:nowrap;}
+  .tab-back:hover{color:var(--ink);}
 
   /* ---------- HERO ---------- */
   .hero{padding:38px 0 28px;}
