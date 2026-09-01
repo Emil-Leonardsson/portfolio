@@ -207,7 +207,7 @@
   /* ---------- Growth Wheel (coaching toolbox navigation) ---------- */
   .wheel-grid{display:grid; grid-template-columns:320px 1fr; gap:40px; align-items:start;}
   @media (max-width:820px){.wheel-grid{grid-template-columns:1fr;}}
-  .wheel-wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:24px;}
+  .wheel-wrap{position:relative; display:flex; align-items:center; justify-content:center;}
   .wheel-svg{max-width:680px; width:100%; height:auto;}
   .wheel-wedge{cursor:pointer; fill:var(--panel); stroke:var(--line); stroke-width:1.5; transition:fill .15s ease;}
   .wheel-wedge:hover, .wheel-wedge.active{fill:var(--teal-soft);}
@@ -221,7 +221,8 @@
   .wheel-label{font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600; fill:var(--ink); pointer-events:none; text-anchor:middle;}
   .wheel-sub-label{font-family:'IBM Plex Mono',monospace; font-size:7.5px; fill:var(--ink-soft); pointer-events:none; text-anchor:middle;}
   .wheel-domain-label{font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.06em; fill:var(--ink-soft); pointer-events:none; text-anchor:middle;}
-  .wheel-caption{font-size:12px; color:var(--ink-soft); max-width:160px; border-left:1px solid var(--line); padding-left:16px;}
+  .wheel-caption{position:absolute; top:50%; left:100%; transform:translateY(-50%); margin-left:24px; width:140px; font-size:12px; line-height:1.6; color:var(--ink-soft); border-left:1px solid var(--line); padding-left:16px;}
+  @media (max-width:1440px){.wheel-caption{position:static; transform:none; margin-left:0; margin-top:16px; width:auto; max-width:360px;}}
   .wheel-caption a{color:var(--ink-soft); text-decoration:underline;}
   .wheel-caption a:hover{color:var(--ink);}
   .wheel-placeholder{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-top:28px; text-align:center; color:var(--ink-soft); font-size:14.5px;}
