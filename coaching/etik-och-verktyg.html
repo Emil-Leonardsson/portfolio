@@ -6,7 +6,7 @@
 <title>Etik, avtal & verktygslåda — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=13">
+<link rel="stylesheet" href="../assets/style.css?v=14">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -388,14 +388,16 @@
 
   function renderToolCard(item) {
     var extraHtml = item.extra ? '<span class="attrib-extra">' + item.extra + '</span>' : '';
-    var wedgeTagsHtml = '<div class="wedge-tags">' + item.wedges.map(function (w) {
-      return '<span class="tag">' + wedgeLabels[w] + '</span>';
-    }).join('') + '</div>';
+    var tagsHtml = '<div class="card-tags">' +
+      '<span class="tag">' + typeLabels[item.type] + '</span>' +
+      item.wedges.map(function (w) {
+        return '<span class="tag wedge">' + wedgeLabels[w] + '</span>';
+      }).join('') +
+    '</div>';
     return '' +
       '<div class="role-card">' +
-        '<span class="tag">' + typeLabels[item.type] + '</span>' +
+        tagsHtml +
         '<h3>' + item.title + '</h3>' +
-        wedgeTagsHtml +
         '<p>' + item.summary + '</p>' +
         '<div class="attrib-note">' +
           'Baserad på material från ProAgile AB, bearbetad och sammanfattad av mig, licensierad under ' +
