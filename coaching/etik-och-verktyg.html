@@ -6,7 +6,7 @@
 <title>Etik, avtal & verktygslåda — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=15">
+<link rel="stylesheet" href="../assets/style.css?v=16">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -193,7 +193,7 @@
 
     <div id="wheelResults"></div>
 
-    <div class="section-head" style="margin-top:56px;"><h2 style="font-size:22px;">Fullständigt register</h2></div>
+    <div class="section-head" style="margin-top:20px;"><h2 style="font-size:22px;">Fullständigt register</h2></div>
     <input type="text" id="registerSearch" class="register-search" placeholder="Sök i verktygslådan...">
     <div id="registerList" class="role-grid"></div>
   </div>
@@ -419,13 +419,18 @@
     }
   }
 
-  document.querySelectorAll('.wheel-wedge, .wheel-sub, .wheel-hub').forEach(function (el) {
+  document.querySelectorAll('.wheel-wedge, .wheel-sub').forEach(function (el) {
     el.addEventListener('click', function () {
       var wedge = el.dataset.wedge;
       document.querySelectorAll('.wheel-wedge, .wheel-sub').forEach(function (w) { w.classList.remove('active'); });
       document.querySelectorAll('.wheel-wedge[data-wedge="' + wedge + '"], .wheel-sub[data-wedge="' + wedge + '"]').forEach(function (w) { w.classList.add('active'); });
       showWedge(wedge);
     });
+  });
+
+  document.querySelector('.wheel-hub').addEventListener('click', function () {
+    document.querySelectorAll('.wheel-wedge, .wheel-sub').forEach(function (w) { w.classList.remove('active'); });
+    document.getElementById('wheelResults').innerHTML = '';
   });
 
   function renderRegister(filter) {
