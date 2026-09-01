@@ -185,6 +185,32 @@
   .cert-card.pending:hover{border-color:var(--line); transform:none;}
   .cert-card.pending:hover h4{color:inherit;}
   .cert-badge{display:inline-block; background:var(--gold-soft); color:var(--gold); font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; padding:3px 9px; border-radius:999px; text-transform:uppercase; letter-spacing:.04em;}
+
+  /* ---------- Attribution / license note (CC BY-SA sourced content) ---------- */
+  .attrib-note{font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.6; color:var(--ink-soft); background:var(--gold-soft); border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-top:4px;}
+  .attrib-note a{color:var(--gold); font-weight:600; text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:2px;}
+  .attrib-note a:hover{color:var(--ink);}
+  .attrib-extra{display:block; margin-top:6px; padding-top:6px; border-top:1px solid var(--line); font-style:italic; color:var(--ink-soft);}
+
+  /* ---------- Growth Wheel (coaching toolbox navigation) ---------- */
+  .wheel-wrap{display:flex; flex-direction:column; align-items:center; margin-top:32px;}
+  .wheel-svg{max-width:420px; width:100%; height:auto;}
+  .wheel-wedge{cursor:pointer; fill:var(--panel); stroke:var(--line); stroke-width:1.5; transition:fill .15s ease;}
+  .wheel-wedge:hover, .wheel-wedge.active{fill:var(--teal-soft);}
+  .wheel-wedge.empty{opacity:.55;}
+  .wheel-hub{fill:var(--teal); cursor:default;}
+  .wheel-hub-label{font-family:'IBM Plex Mono',monospace; font-size:10px; fill:#fff; pointer-events:none; text-anchor:middle;}
+  .wheel-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; fill:var(--ink); pointer-events:none; text-anchor:middle;}
+  .wheel-caption{font-size:12px; color:var(--ink-soft); text-align:center; margin-top:14px; max-width:52ch;}
+  .wheel-caption a{color:var(--ink-soft); text-decoration:underline;}
+  .wheel-caption a:hover{color:var(--ink);}
+  .wheel-placeholder{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-top:28px; text-align:center; color:var(--ink-soft); font-size:14.5px;}
+
+  /* ---------- Register / search ---------- */
+  .register-search{width:100%; max-width:360px; padding:10px 14px; border:1px solid var(--line); border-radius:999px; font-family:'Inter',sans-serif; font-size:14px; margin:24px 0 8px; display:block;}
+  .register-search:focus{outline:none; border-color:var(--teal);}
+  .register-empty{color:var(--ink-soft); font-size:14px; padding:20px 0;}
+
   .subgrid{display:grid; grid-template-columns:1fr 1fr; gap:44px; margin-top:56px;}
   @media (max-width:760px){.subgrid{grid-template-columns:1fr;}}
   .subgrid h4{font-family:'IBM Plex Mono',monospace; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:14px;}
