@@ -409,7 +409,7 @@
     var matches = tools.filter(function (t) { return t.wedges.indexOf(wedge) !== -1; });
     var el = document.getElementById('wheelResults');
     if (matches.length === 0) {
-      el.innerHTML = '<div class="wheel-placeholder">Innehåll för ' + wedgeLabels[wedge] + ' är på väg.</div>';
+      el.innerHTML = '<div class="wheel-placeholder">Inget innehåll för ' + wedgeLabels[wedge] + ' än, jag fyller på efter hand.</div>';
     } else {
       el.innerHTML = '<div class="role-grid" style="margin-top:32px;">' + matches.map(renderToolCard).join('') + '</div>';
     }
