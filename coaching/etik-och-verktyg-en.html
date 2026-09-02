@@ -6,7 +6,7 @@
 <title>Ethics, agreement & toolbox — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=17">
+<link rel="stylesheet" href="../assets/style.css?v=18">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -368,6 +368,36 @@
       wedges: ['leading'],
       link: 'https://proagileab.github.io/agile-team-development/guides/Team-Vision.html',
       extra: null
+    },
+    {
+      id: 'agile-alliance-ethics-code',
+      type: 'lasning',
+      title: 'Code of Ethical Conduct for Agile Coaching',
+      summary: 'Agile Alliance brought the industry together around a shared code of ethics: 9 areas, including confidentiality, conflicts of interest, power differences and responsibility to the profession.',
+      wedges: ['coaching', 'self-mastery'],
+      link: 'https://agilealliance.org/agile-coaching-code-of-ethical-conduct/',
+      source: 'Agile Alliance',
+      extra: null
+    },
+    {
+      id: 'icagile-ethics-do-no-harm',
+      type: 'lasning',
+      title: 'Ethics in the Profession of Agile Coaching: Catalyzing Change While Doing No Harm',
+      summary: 'ICAgile explains why an unregulated profession like agile coaching needs ethical awareness, a coach can cause harm without noticing, even with good intentions.',
+      wedges: ['coaching', 'self-mastery'],
+      link: 'https://www.icagile.com/resources/ethics-in-the-profession-of-agile-coaching-catalyzing-change-while-doing-no-harm',
+      source: 'ICAgile',
+      extra: null
+    },
+    {
+      id: 'icf-code-of-ethics',
+      type: 'lasning',
+      title: 'ICF Code of Ethics',
+      summary: 'The wider coaching profession\'s ethical framework: confidentiality, clear role boundaries and when to refer onward instead of coaching outside your competence.',
+      wedges: ['coaching', 'self-mastery'],
+      link: 'https://coachingfederation.org/credentialing/coaching-ethics/icf-code-of-ethics/',
+      source: 'International Coaching Federation (ICF)',
+      extra: null
     }
   ];
 
@@ -383,7 +413,7 @@
     'self-mastery': 'Self Mastery'
   };
 
-  var typeLabels = { koncept: 'CONCEPT', ovning: 'EXERCISE' };
+  var typeLabels = { koncept: 'CONCEPT', ovning: 'EXERCISE', lasning: 'READING' };
 
   function renderToolCard(item) {
     var extraHtml = item.extra ? '<span class="attrib-extra">' + item.extra + '</span>' : '';
@@ -393,18 +423,27 @@
         return '<span class="tag wedge">' + wedgeLabels[w] + '</span>';
       }).join('') +
     '</div>';
-    return '' +
-      '<div class="role-card">' +
-        tagsHtml +
-        '<h3>' + item.title + '</h3>' +
-        '<p>' + item.summary + '</p>' +
+    var attribHtml, linkText;
+    if (item.type === 'lasning') {
+      attribHtml = '<div class="attrib-note">External reading &middot; Source: <a href="' + item.link + '" target="_blank" rel="noopener">' + item.source + '</a></div>';
+      linkText = 'Read at ' + item.source + ' ↗';
+    } else {
+      attribHtml = '' +
         '<div class="attrib-note">' +
           'Adapted from material by ProAgile AB, reworked and summarized by me, licensed under ' +
           '<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> &middot; ' +
           'Source: <a href="https://proagile.se/teams" target="_blank" rel="noopener">ProAgile AB</a>' +
           extraHtml +
-        '</div>' +
-        '<a href="' + item.link + '" target="_blank" rel="noopener">Read the original at ProAgile ↗</a>' +
+        '</div>';
+      linkText = 'Read the original at ProAgile ↗';
+    }
+    return '' +
+      '<div class="role-card">' +
+        tagsHtml +
+        '<h3>' + item.title + '</h3>' +
+        '<p>' + item.summary + '</p>' +
+        attribHtml +
+        '<a href="' + item.link + '" target="_blank" rel="noopener">' + linkText + '</a>' +
       '</div>';
   }
 
