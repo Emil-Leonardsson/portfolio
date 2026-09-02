@@ -68,8 +68,8 @@
         <path class="wheel-sub" data-wedge="leading" d="M90,230 L35,230 A195,195 0 0 1 41.6,179.5 L94.8,193.8 A140,140 0 0 0 90,230 Z"></path>
         <path class="wheel-sub" data-wedge="leading" d="M94.8,193.8 L41.6,179.5 A195,195 0 0 1 61.1,132.5 L108.8,160 A140,140 0 0 0 94.8,193.8 Z"></path>
         <path class="wheel-sub" data-wedge="leading" d="M108.8,160 L61.1,132.5 A195,195 0 0 1 92.1,92.1 L131,131 A140,140 0 0 0 108.8,160 Z"></path>
-        <path class="wheel-sub empty" data-wedge="transforming" d="M131,131 L92.1,92.1 A195,195 0 0 1 155.4,49.8 L176.4,100.7 A140,140 0 0 0 131,131 Z"></path>
-        <path class="wheel-sub empty" data-wedge="transforming" d="M176.4,100.7 L155.4,49.8 A195,195 0 0 1 230,35 L230,90 A140,140 0 0 0 176.4,100.7 Z"></path>
+        <path class="wheel-sub" data-wedge="transforming" d="M131,131 L92.1,92.1 A195,195 0 0 1 155.4,49.8 L176.4,100.7 A140,140 0 0 0 131,131 Z"></path>
+        <path class="wheel-sub" data-wedge="transforming" d="M176.4,100.7 L155.4,49.8 A195,195 0 0 1 230,35 L230,90 A140,140 0 0 0 176.4,100.7 Z"></path>
 
         <!-- Inner ring: competency areas -->
         <path class="wheel-wedge" data-wedge="agile-lean" d="M230,180 L230,90 A140,140 0 0 1 329,131 L265.4,194.6 A50,50 0 0 0 230,180 Z"></path>
@@ -79,7 +79,7 @@
         <path class="wheel-wedge" data-wedge="guiding-learning" d="M230,280 L230,370 A140,140 0 0 1 131,329 L194.6,265.4 A50,50 0 0 0 230,280 Z"></path>
         <path class="wheel-wedge empty" data-wedge="advising" d="M194.6,265.4 L131,329 A140,140 0 0 1 90,230 L180,230 A50,50 0 0 0 194.6,265.4 Z"></path>
         <path class="wheel-wedge" data-wedge="leading" d="M180,230 L90,230 A140,140 0 0 1 131,131 L194.6,194.6 A50,50 0 0 0 180,230 Z"></path>
-        <path class="wheel-wedge empty" data-wedge="transforming" d="M194.6,194.6 L131,131 A140,140 0 0 1 230,90 L230,180 A50,50 0 0 0 194.6,194.6 Z"></path>
+        <path class="wheel-wedge" data-wedge="transforming" d="M194.6,194.6 L131,131 A140,140 0 0 1 230,90 L230,180 A50,50 0 0 0 194.6,194.6 Z"></path>
 
         <circle class="wheel-hub" data-wedge="self-mastery" cx="230" cy="230" r="50"></circle>
         <text class="wheel-hub-label" x="230" y="226"><tspan x="230">Self</tspan><tspan x="230" dy="12">Mastery</tspan></text>
@@ -387,6 +387,56 @@
       link: 'https://www.agile-moose.com/repo-canvases',
       source: 'Bob Galen, Agile Moose',
       extra: 'Part of one combined PDF with 7 canvases, not its own page.'
+    },
+    {
+      id: 'scrum-competency-understanding-framework',
+      type: 'lasning',
+      title: 'Understanding and Applying the Scrum Framework',
+      summary: 'A deeper dive into Scrum theory and the framework: empiricism, the Scrum values, the Scrum team, events and artifacts, with practical advice for increasing effectiveness.',
+      wedges: ['agile-lean'],
+      link: 'https://www.scrum.org/professional-scrum-competencies/understanding-and-applying-scrum-framework',
+      source: 'Scrum.org',
+      extra: null
+    },
+    {
+      id: 'scrum-competency-developing-people-teams',
+      type: 'lasning',
+      title: 'Developing People and Teams',
+      summary: 'On developing people and teams within Scrum: self-managing teams, facilitation, leadership styles, coaching and mentoring, a responsibility shared by the whole team, not just the Scrum Master.',
+      wedges: ['coaching', 'facilitating', 'leading', 'guiding-learning'],
+      link: 'https://www.scrum.org/professional-scrum-competencies/developing-people-and-teams-old',
+      source: 'Scrum.org',
+      extra: null
+    },
+    {
+      id: 'scrum-competency-managing-products',
+      type: 'lasning',
+      title: 'Managing Products with Agility',
+      summary: 'On managing products with agility: a clear product vision aligned with business strategy, and a continuous focus on product value and stakeholders.',
+      wedges: ['serving'],
+      link: 'https://www.scrum.org/professional-scrum-competencies/managing-products-with-agility',
+      source: 'Scrum.org',
+      extra: null
+    },
+    {
+      id: 'scrum-competency-developing-delivering-products',
+      type: 'lasning',
+      title: 'Developing and Delivering Products Professionally',
+      summary: 'On delivering products professionally: continuous integration/delivery, managing technical risk, and how the organization builds the capability to deliver value reliably and often.',
+      wedges: ['serving', 'transforming'],
+      link: 'https://www.scrum.org/professional-scrum-competencies/developing-and-delivering-products-professionally',
+      source: 'Scrum.org',
+      extra: null
+    },
+    {
+      id: 'scrum-competency-evolving-organization',
+      type: 'lasning',
+      title: 'Evolving the Agile Organization',
+      summary: 'On evolving the agile organization: Evidence-Based Management for data-driven decisions about value, plus organizational design and culture that can support or inhibit agility.',
+      wedges: ['transforming'],
+      link: 'https://www.scrum.org/professional-scrum-competencies/evolving-the-agile-organization',
+      source: 'Scrum.org',
+      extra: null
     }
   ];
 
