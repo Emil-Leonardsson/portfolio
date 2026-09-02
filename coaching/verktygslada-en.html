@@ -52,8 +52,8 @@
         <text class="wheel-domain-label" x="230" y="20">Domain Knowledge</text>
 
         <!-- Mid ring: sub-competencies -->
-        <path class="wheel-sub empty" data-wedge="agile-lean" d="M230,90 L230,35 A195,195 0 0 1 304.6,49.8 L283.6,100.7 A140,140 0 0 0 230,90 Z"></path>
-        <path class="wheel-sub empty" data-wedge="agile-lean" d="M283.6,100.7 L304.6,49.8 A195,195 0 0 1 367.9,92.1 L329,131 A140,140 0 0 0 283.6,100.7 Z"></path>
+        <path class="wheel-sub" data-wedge="agile-lean" d="M230,90 L230,35 A195,195 0 0 1 304.6,49.8 L283.6,100.7 A140,140 0 0 0 230,90 Z"></path>
+        <path class="wheel-sub" data-wedge="agile-lean" d="M283.6,100.7 L304.6,49.8 A195,195 0 0 1 367.9,92.1 L329,131 A140,140 0 0 0 283.6,100.7 Z"></path>
         <path class="wheel-sub" data-wedge="serving" d="M329,131 L367.9,92.1 A195,195 0 0 1 410.2,155.4 L359.3,176.4 A140,140 0 0 0 329,131 Z"></path>
         <path class="wheel-sub" data-wedge="serving" d="M359.3,176.4 L410.2,155.4 A195,195 0 0 1 425,230 L370,230 A140,140 0 0 0 359.3,176.4 Z"></path>
         <path class="wheel-sub" data-wedge="coaching" d="M370,230 L425,230 A195,195 0 0 1 410.2,304.6 L359.3,283.6 A140,140 0 0 0 370,230 Z"></path>
@@ -72,7 +72,7 @@
         <path class="wheel-sub empty" data-wedge="transforming" d="M176.4,100.7 L155.4,49.8 A195,195 0 0 1 230,35 L230,90 A140,140 0 0 0 176.4,100.7 Z"></path>
 
         <!-- Inner ring: competency areas -->
-        <path class="wheel-wedge empty" data-wedge="agile-lean" d="M230,180 L230,90 A140,140 0 0 1 329,131 L265.4,194.6 A50,50 0 0 0 230,180 Z"></path>
+        <path class="wheel-wedge" data-wedge="agile-lean" d="M230,180 L230,90 A140,140 0 0 1 329,131 L265.4,194.6 A50,50 0 0 0 230,180 Z"></path>
         <path class="wheel-wedge" data-wedge="serving" d="M265.4,194.6 L329,131 A140,140 0 0 1 370,230 L280,230 A50,50 0 0 0 265.4,194.6 Z"></path>
         <path class="wheel-wedge" data-wedge="coaching" d="M280,230 L370,230 A140,140 0 0 1 329,329 L265.4,265.4 A50,50 0 0 0 280,230 Z"></path>
         <path class="wheel-wedge" data-wedge="facilitating" d="M265.4,265.4 L329,329 A140,140 0 0 1 230,370 L230,280 A50,50 0 0 0 265.4,265.4 Z"></path>
@@ -327,6 +327,66 @@
       link: 'https://coachingfederation.org/credentialing/coaching-ethics/icf-code-of-ethics/',
       source: 'International Coaching Federation (ICF)',
       extra: null
+    },
+    {
+      id: 'scrum-guide',
+      type: 'lasning',
+      title: 'Scrum Guide',
+      summary: 'The official, short foundational document for Scrum: roles, events and artifacts, written by Ken Schwaber and Jeff Sutherland.',
+      wedges: ['agile-lean'],
+      link: 'https://scrumguides.org/scrum-guide.html',
+      source: 'scrumguides.org',
+      extra: null
+    },
+    {
+      id: 'agile-manifesto',
+      type: 'lasning',
+      title: 'Manifesto for Agile Software Development',
+      summary: 'The four values and twelve principles that started the agile movement in 2001, written by 17 software developers. Short, timeless, and worth reading again and again.',
+      wedges: ['agile-lean'],
+      link: 'https://agilemanifesto.org/',
+      source: 'agilemanifesto.org',
+      extra: null
+    },
+    {
+      id: 'agile-moose-journaling',
+      type: 'lasning',
+      title: 'Journaling – How to get started?',
+      summary: "Bob Galen's practical way into journaling as a tool for self-reflection and learning: routine, short sessions, pen and paper, and approaching it with curiosity.",
+      wedges: ['self-mastery'],
+      link: 'https://www.agile-moose.com/blog/2019/6/23/journaling-how-to-get-started',
+      source: 'Bob Galen, Agile Moose',
+      extra: null
+    },
+    {
+      id: 'agile-moose-self-care-canvas',
+      type: 'lasning',
+      title: 'Agile Coaching Self-Care Canvas',
+      summary: "A canvas for deliberately reflecting on and planning your own recovery and sustainability as a coach, one of several coaching canvases from Agile Moose.",
+      wedges: ['self-mastery'],
+      link: 'https://www.agile-moose.com/repo-canvases',
+      source: 'Bob Galen, Agile Moose',
+      extra: 'Part of one combined PDF with 7 canvases, not its own page.'
+    },
+    {
+      id: 'agile-moose-agreement-canvas',
+      type: 'lasning',
+      title: 'Agile Coaching Agreement Canvas',
+      summary: 'A canvas for structuring the conversation when setting up a coaching agreement, a relevant reference for my own Coaching agreement & alliance section.',
+      wedges: ['coaching'],
+      link: 'https://www.agile-moose.com/repo-canvases',
+      source: 'Bob Galen, Agile Moose',
+      extra: 'Part of one combined PDF with 7 canvases, not its own page.'
+    },
+    {
+      id: 'agile-moose-client-canvas',
+      type: 'lasning',
+      title: 'Agile Coaching Client Canvas',
+      summary: 'A canvas for tracking and structuring an ongoing coaching engagement with a client.',
+      wedges: ['coaching'],
+      link: 'https://www.agile-moose.com/repo-canvases',
+      source: 'Bob Galen, Agile Moose',
+      extra: 'Part of one combined PDF with 7 canvases, not its own page.'
     }
   ];
 
