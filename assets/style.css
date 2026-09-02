@@ -314,6 +314,9 @@
 @media (max-width:760px){.split-two{grid-template-columns:1fr;}}
 .split-col{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px;}
 .split-col h4{font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:16px;}
+.ethics-list{display:flex; flex-direction:column; gap:26px; margin-top:28px;}
+.ethics-list h3{font-size:19px; margin-bottom:6px;}
+.ethics-list p{color:var(--ink-soft); font-size:15px; line-height:1.65; margin:0;}
 .split-item{padding:12px 0; border-top:1px solid var(--line); font-size:14px;}
 .split-item:first-of-type{border-top:none;}
 .split-item b{display:block; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
