@@ -31,7 +31,7 @@
   .navlinks a{text-decoration:none; color:var(--ink-soft); font-weight:500; white-space:nowrap;}
   .navlinks a:hover{color:var(--ink);}
   .cta-small{background:var(--ink); color:var(--paper); padding:9px 15px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
-  .lang-switch{border:1px solid var(--line); color:var(--ink-soft); padding:7px 11px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
+  .lang-switch{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); color:var(--ink-soft); padding:7px 11px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
   .lang-switch:hover{border-color:var(--ink); color:var(--ink);}
 
   .burger{
@@ -66,7 +66,7 @@
   .tab-links a{text-decoration:none; color:var(--ink-soft); font-weight:500; white-space:nowrap;}
   .tab-links a:hover{color:var(--ink);}
   .tab-links a.active{color:var(--teal); font-weight:700;}
-  .tab-lang{border:1px solid var(--line); color:var(--ink-soft); padding:7px 11px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
+  .tab-lang{display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); color:var(--ink-soft); padding:7px 11px; border-radius:999px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;}
   .tab-lang:hover{border-color:var(--ink); color:var(--ink);}
   .tab-back{font-size:13px; font-weight:600; color:var(--ink-soft); text-decoration:none; white-space:nowrap;}
   .tab-back:hover{color:var(--ink);}
