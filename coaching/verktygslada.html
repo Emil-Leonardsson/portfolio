@@ -120,6 +120,13 @@
     </div>
     </div>
 
+    <div class="register-filters wheel-filters" style="margin-top:20px;">
+      <button type="button" class="filter-btn active" data-wheel-type="all">Alla</button>
+      <button type="button" class="filter-btn" data-wheel-type="ovning">Övningar</button>
+      <button type="button" class="filter-btn" data-wheel-type="koncept">Koncept</button>
+      <button type="button" class="filter-btn" data-wheel-type="lasning">Läsning</button>
+      <button type="button" class="filter-btn" data-wheel-type="bok">Böcker</button>
+    </div>
     <div id="wheelResults"></div>
 
     <div class="section-head" style="margin-top:32px; padding-top:32px; border-top:1px solid var(--line);"><h2>Fullständigt register</h2></div>
@@ -638,14 +645,29 @@
       '</div>';
   }
 
-  function showWedge(wedge) {
-    var matches = tools.filter(function (t) { return t.wedges.indexOf(wedge) !== -1; });
+  var currentWedge = null;
+  var wheelTypeFilter = 'all';
+
+  function renderWheelResults() {
     var el = document.getElementById('wheelResults');
-    if (matches.length === 0) {
-      el.innerHTML = '<div class="wheel-placeholder">Inget innehåll för ' + wedgeLabels[wedge] + ' än, jag fyller på efter hand.</div>';
+    if (!currentWedge) {
+      el.innerHTML = '';
+      return;
+    }
+    var wedgeMatches = tools.filter(function (t) { return t.wedges.indexOf(currentWedge) !== -1; });
+    var matches = wedgeMatches.filter(function (t) { return wheelTypeFilter === 'all' || t.type === wheelTypeFilter; });
+    if (wedgeMatches.length === 0) {
+      el.innerHTML = '<div class="wheel-placeholder">Inget innehåll för ' + wedgeLabels[currentWedge] + ' än, jag fyller på efter hand.</div>';
+    } else if (matches.length === 0) {
+      el.innerHTML = '<div class="wheel-placeholder">Inget under &quot;' + typeLabels[wheelTypeFilter] + '&quot; för ' + wedgeLabels[currentWedge] + ' just nu, prova ett annat filter.</div>';
     } else {
       el.innerHTML = '<div class="role-grid" style="margin-top:32px;">' + matches.map(renderToolCard).join('') + '</div>';
     }
+  }
+
+  function showWedge(wedge) {
+    currentWedge = wedge;
+    renderWheelResults();
   }
 
   document.querySelectorAll('.wheel-wedge, .wheel-sub').forEach(function (el) {
@@ -659,7 +681,17 @@
 
   document.querySelector('.wheel-hub').addEventListener('click', function () {
     document.querySelectorAll('.wheel-wedge, .wheel-sub').forEach(function (w) { w.classList.remove('active'); });
-    document.getElementById('wheelResults').innerHTML = '';
+    currentWedge = null;
+    renderWheelResults();
+  });
+
+  document.querySelectorAll('[data-wheel-type]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-wheel-type]').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      wheelTypeFilter = btn.dataset.wheelType;
+      renderWheelResults();
+    });
   });
 
   var registerTypeFilter = 'all';
@@ -681,9 +713,9 @@
     renderRegister(e.target.value);
   });
 
-  document.querySelectorAll('.filter-btn').forEach(function (btn) {
+  document.querySelectorAll('[data-type]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('[data-type]').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
       registerTypeFilter = btn.dataset.type;
       renderRegister(document.getElementById('registerSearch').value);
