@@ -331,15 +331,11 @@
 .radar-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; fill:var(--ink-soft);}
 .radar-tooltip{position:absolute; left:0; top:0; pointer-events:none; background:var(--ink); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:5px 9px; border-radius:6px; white-space:nowrap; opacity:0; transform:translate(-50%,-100%); transition:opacity .08s ease; z-index:5;}
 .radar-tooltip.visible{opacity:1;}
-.ethics-code-panel{background:var(--teal-soft); border:1px solid var(--line); border-radius:var(--radius); padding:28px; margin-top:28px;}
-.ethics-code-title{font-family:'Spectral',serif; font-size:19px; font-weight:600; color:var(--ink); margin:0 0 22px; text-align:center;}
-.ethics-code-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px 16px;}
-@media (max-width:700px){.ethics-code-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:460px){.ethics-code-grid{grid-template-columns:1fr;}}
-.ethics-code-item{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;}
-.ethics-code-icon{width:44px; height:44px; flex-shrink:0;}
-.ethics-code-item span{font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:var(--ink); line-height:1.4;}
-.ethics-code-credit{font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:24px; line-height:1.6;}
+.ethics-code-image{margin-top:32px;}
+.ethics-code-image a{display:block; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);}
+.ethics-code-image img{display:block; width:100%; height:auto; transition:opacity .15s ease;}
+.ethics-code-image a:hover img{opacity:.9;}
+.ethics-code-credit{font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:14px; line-height:1.6;}
 .ethics-code-credit a{color:var(--teal); font-weight:600; text-decoration:underline; text-decoration-color:var(--teal); text-underline-offset:2px;}
 .ethics-code-credit a:hover{color:var(--ink);}
 .ethics-list{display:flex; flex-direction:column; gap:26px; margin-top:28px;}
