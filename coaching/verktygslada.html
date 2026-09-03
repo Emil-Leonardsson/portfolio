@@ -6,7 +6,7 @@
 <title>Verktygslåda & Kunskapsbank — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=22">
+<link rel="stylesheet" href="../assets/style.css?v=23">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -123,7 +123,15 @@
     <div id="wheelResults"></div>
 
     <div class="section-head" style="margin-top:32px; padding-top:32px; border-top:1px solid var(--line);"><h2>Fullständigt register</h2></div>
-    <input type="text" id="registerSearch" class="register-search" placeholder="Sök i verktygslådan...">
+    <div class="register-controls">
+      <input type="text" id="registerSearch" class="register-search" placeholder="Sök i verktygslådan...">
+      <div class="register-filters">
+        <button type="button" class="filter-btn active" data-type="all">Alla</button>
+        <button type="button" class="filter-btn" data-type="ovning">Övningar</button>
+        <button type="button" class="filter-btn" data-type="koncept">Koncept</button>
+        <button type="button" class="filter-btn" data-type="lasning">Läsning</button>
+      </div>
+    </div>
     <div id="registerList" class="role-grid"></div>
   </div>
 </section>
@@ -540,10 +548,14 @@
     document.getElementById('wheelResults').innerHTML = '';
   });
 
+  var registerTypeFilter = 'all';
+
   function renderRegister(filter) {
     var f = (filter || '').toLowerCase();
     var matches = tools.filter(function (t) {
-      return t.title.toLowerCase().indexOf(f) !== -1 || t.summary.toLowerCase().indexOf(f) !== -1;
+      var matchesText = t.title.toLowerCase().indexOf(f) !== -1 || t.summary.toLowerCase().indexOf(f) !== -1;
+      var matchesType = registerTypeFilter === 'all' || t.type === registerTypeFilter;
+      return matchesText && matchesType;
     });
     var el = document.getElementById('registerList');
     el.innerHTML = matches.length
@@ -553,6 +565,15 @@
 
   document.getElementById('registerSearch').addEventListener('input', function (e) {
     renderRegister(e.target.value);
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      registerTypeFilter = btn.dataset.type;
+      renderRegister(document.getElementById('registerSearch').value);
+    });
   });
 
   renderRegister('');
