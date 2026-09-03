@@ -130,6 +130,7 @@
         <button type="button" class="filter-btn" data-type="ovning">Övningar</button>
         <button type="button" class="filter-btn" data-type="koncept">Koncept</button>
         <button type="button" class="filter-btn" data-type="lasning">Läsning</button>
+        <button type="button" class="filter-btn" data-type="bok">Böcker</button>
       </div>
     </div>
     <div id="registerList" class="role-grid"></div>
@@ -475,6 +476,116 @@
       link: 'https://www.scrum.org/resources/8-stances-scrum-master',
       source: 'Barry Overeem, Scrum.org',
       extra: null
+    },
+    {
+      id: 'book-extraordinarily-badass-agile-coaching',
+      type: 'bok',
+      title: 'Extraordinarily Badass Agile Coaching',
+      summary: 'Bygger på Agile Coaching Growth Wheel som kompetensmodell och beskriver vad som skiljer verklig expertis från ytlig agil coaching, med ramverk för utveckling inom team-, organisations-, teknisk och ledarskapscoaching.',
+      wedges: ['self-mastery', 'coaching'],
+      link: '../index.html#lashornan',
+      source: 'Robert L. Galen',
+      extra: null
+    },
+    {
+      id: 'book-basics-of-kanban',
+      type: 'bok',
+      title: 'The Basics of Kanban',
+      summary: 'En kompakt introduktion till Kanban: principer, praktiker, Kanban-tavlan, WIP-gränser och nyckeltal som ledtid och cykeltid, satt i relation till Scrum och Lean.',
+      wedges: ['agile-lean'],
+      link: '../index.html#lashornan',
+      source: 'Aditi Agarwal',
+      extra: null
+    },
+    {
+      id: 'book-product-mastery',
+      type: 'bok',
+      title: 'Product Mastery',
+      summary: 'Om vad som skiljer goda produktägare från riktigt bra: beslutsamhet med ofullständig information, fokus på att maximera värde och minimera risk, och ett flexibelt ledarskap.',
+      wedges: ['serving'],
+      link: '../index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-team-mastery',
+      type: 'bok',
+      title: 'Team Mastery',
+      summary: 'Om vad som gör team riktigt bra, med SQUAD-ramverket (Self-Improvement, Quality, Unity, Audacity, Delivery) och berättelser att reflektera kring snarare än checklistor.',
+      wedges: ['coaching', 'serving'],
+      link: '../index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-coaching-habit',
+      type: 'bok',
+      title: 'The Coaching Habit',
+      summary: 'Sju enkla coachande frågor, bland annat "Vad mer?" och "Vad är den verkliga utmaningen för dig här?", som gör coaching till en naturlig del av vardagen istället för ett separat moment.',
+      wedges: ['coaching'],
+      link: '../index.html#lashornan',
+      source: 'Michael Bungay Stanier',
+      extra: null
+    },
+    {
+      id: 'book-art-of-coaching',
+      type: 'bok',
+      title: 'The Art of Coaching',
+      summary: 'En modell för transformativ coaching: hur man bygger tillit, lyssnar på riktigt och ställer kraftfulla frågor, med rollen att guida snarare än att rädda eller fixa.',
+      wedges: ['coaching'],
+      link: '../index.html#lashornan',
+      source: 'Elena Aguilar',
+      extra: null
+    },
+    {
+      id: 'book-mastering-professional-scrum',
+      type: 'bok',
+      title: 'Mastering Professional Scrum',
+      summary: 'Praktisk vägledning för att gå tillbaka till Scrums grundprinciper och undvika att bara "gå igenom rörelserna", med konkreta sätt att hantera vanliga utmaningar i Scrum-team.',
+      wedges: ['agile-lean'],
+      link: '../index.html#lashornan',
+      source: 'Stephanie Ockerman & Simon Reindl',
+      extra: null
+    },
+    {
+      id: 'book-scrum-mastery',
+      type: 'bok',
+      title: 'Scrum Mastery',
+      summary: 'Om vad som skiljer goda Scrum Masters från riktigt bra, med RE-TRAINED-ramverket för servant leadership och konkret vägledning för att öka teamets engagemang och möteseffektivitet.',
+      wedges: ['facilitating', 'leading'],
+      link: '../index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-coaching-agile-teams',
+      type: 'bok',
+      title: 'Coaching Agile Teams',
+      summary: 'En av de mest inflytelserika böckerna om agil coaching, om skiftet från "problemlösare" till "problemidentifierare", och hur man guidar team mot självständighet och egna lösningar.',
+      wedges: ['coaching', 'leading'],
+      link: '../index.html#lashornan',
+      source: 'Lyssa Adkins',
+      extra: null
+    },
+    {
+      id: 'book-lean-mastery-collection',
+      type: 'bok',
+      title: 'Lean Mastery Collection',
+      summary: 'En samlingsvolym (8 böcker i 1) som täcker Lean Six Sigma, Lean Startup, Scrum, agil projektledning och Kanban, ett brett startpaket snarare än en djupdykning i ett enskilt ämne.',
+      wedges: ['agile-lean'],
+      link: '../index.html#lashornan',
+      source: 'Greg Caldwell',
+      extra: null
+    },
+    {
+      id: 'book-kanban-from-the-inside',
+      type: 'bok',
+      title: 'Kanban from the Inside',
+      summary: 'Förklarar Kanban-metoden via nio värderingar (transparens, balans, samarbete, kundfokus, flöde, ledarskap, förståelse, överenskommelse och respekt), samt STATIK, ett stegvis tillvägagångssätt för att införa Kanban.',
+      wedges: ['agile-lean'],
+      link: '../index.html#lashornan',
+      source: 'Mike Burrows',
+      extra: null
     }
   ];
 
@@ -490,7 +601,7 @@
     'self-mastery': 'Self Mastery'
   };
 
-  var typeLabels = { koncept: 'KONCEPT', ovning: 'ÖVNING', lasning: 'LÄSNING' };
+  var typeLabels = { koncept: 'KONCEPT', ovning: 'ÖVNING', lasning: 'LÄSNING', bok: 'BOK' };
 
   function renderToolCard(item) {
     var extraHtml = item.extra ? '<span class="attrib-extra">' + item.extra + '</span>' : '';
@@ -504,6 +615,9 @@
     if (item.type === 'lasning') {
       attribHtml = '<div class="attrib-note">Extern läsning &middot; Källa: <a href="' + item.link + '" target="_blank" rel="noopener">' + item.source + '</a></div>';
       linkText = 'Läs hos ' + item.source + ' ↗';
+    } else if (item.type === 'bok') {
+      attribHtml = '<div class="attrib-note">Från min läshörna &middot; Författare: ' + item.source + '</div>';
+      linkText = 'Se hela läshörnan ↗';
     } else {
       attribHtml = '' +
         '<div class="attrib-note">' +

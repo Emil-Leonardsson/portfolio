@@ -130,6 +130,7 @@
         <button type="button" class="filter-btn" data-type="ovning">Exercises</button>
         <button type="button" class="filter-btn" data-type="koncept">Concepts</button>
         <button type="button" class="filter-btn" data-type="lasning">Reading</button>
+        <button type="button" class="filter-btn" data-type="bok">Books</button>
       </div>
     </div>
     <div id="registerList" class="role-grid"></div>
@@ -475,6 +476,116 @@
       link: 'https://www.scrum.org/resources/8-stances-scrum-master',
       source: 'Barry Overeem, Scrum.org',
       extra: null
+    },
+    {
+      id: 'book-extraordinarily-badass-agile-coaching',
+      type: 'bok',
+      title: 'Extraordinarily Badass Agile Coaching',
+      summary: 'Built around the Agile Coaching Growth Wheel as its competency model, describing what separates real expertise from shallow agile coaching, with frameworks for growth across team, organizational, technical and leadership coaching.',
+      wedges: ['self-mastery', 'coaching'],
+      link: '../en/index.html#lashornan',
+      source: 'Robert L. Galen',
+      extra: null
+    },
+    {
+      id: 'book-basics-of-kanban',
+      type: 'bok',
+      title: 'The Basics of Kanban',
+      summary: 'A compact introduction to Kanban: principles, practices, the Kanban board, WIP limits, and metrics like lead time and cycle time, placed in context with Scrum and Lean.',
+      wedges: ['agile-lean'],
+      link: '../en/index.html#lashornan',
+      source: 'Aditi Agarwal',
+      extra: null
+    },
+    {
+      id: 'book-product-mastery',
+      type: 'bok',
+      title: 'Product Mastery',
+      summary: 'On what separates good product owners from great ones: decisiveness with incomplete information, a focus on maximizing value and minimizing risk, and flexible leadership.',
+      wedges: ['serving'],
+      link: '../en/index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-team-mastery',
+      type: 'bok',
+      title: 'Team Mastery',
+      summary: 'On what makes teams truly great, using the SQUAD framework (Self-Improvement, Quality, Unity, Audacity, Delivery) and stories to reflect on rather than checklists.',
+      wedges: ['coaching', 'serving'],
+      link: '../en/index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-coaching-habit',
+      type: 'bok',
+      title: 'The Coaching Habit',
+      summary: 'Seven simple coaching questions, including "What else?" and "What\'s the real challenge here for you?", that turn coaching into a natural part of everyday work instead of a separate event.',
+      wedges: ['coaching'],
+      link: '../en/index.html#lashornan',
+      source: 'Michael Bungay Stanier',
+      extra: null
+    },
+    {
+      id: 'book-art-of-coaching',
+      type: 'bok',
+      title: 'The Art of Coaching',
+      summary: "A model for transformational coaching: building trust, listening well, and asking powerful questions, with the coach's role being to guide rather than rescue or fix.",
+      wedges: ['coaching'],
+      link: '../en/index.html#lashornan',
+      source: 'Elena Aguilar',
+      extra: null
+    },
+    {
+      id: 'book-mastering-professional-scrum',
+      type: 'bok',
+      title: 'Mastering Professional Scrum',
+      summary: 'Practical guidance for returning to Scrum\'s first principles instead of just "going through the motions", with concrete ways to handle common challenges in Scrum teams.',
+      wedges: ['agile-lean'],
+      link: '../en/index.html#lashornan',
+      source: 'Stephanie Ockerman & Simon Reindl',
+      extra: null
+    },
+    {
+      id: 'book-scrum-mastery',
+      type: 'bok',
+      title: 'Scrum Mastery',
+      summary: 'On what separates good Scrum Masters from great ones, using the RE-TRAINED framework for servant-leadership and concrete guidance for increasing team engagement and meeting effectiveness.',
+      wedges: ['facilitating', 'leading'],
+      link: '../en/index.html#lashornan',
+      source: 'Geoff Watts',
+      extra: null
+    },
+    {
+      id: 'book-coaching-agile-teams',
+      type: 'bok',
+      title: 'Coaching Agile Teams',
+      summary: 'One of the most influential books on agile coaching, on the shift from "problem solver" to "problem identifier", and how to guide teams toward independence and their own solutions.',
+      wedges: ['coaching', 'leading'],
+      link: '../en/index.html#lashornan',
+      source: 'Lyssa Adkins',
+      extra: null
+    },
+    {
+      id: 'book-lean-mastery-collection',
+      type: 'bok',
+      title: 'Lean Mastery Collection',
+      summary: 'A collection (8 books in 1) covering Lean Six Sigma, Lean Startup, Scrum, agile project management and Kanban, a broad starting package rather than a deep dive into one topic.',
+      wedges: ['agile-lean'],
+      link: '../en/index.html#lashornan',
+      source: 'Greg Caldwell',
+      extra: null
+    },
+    {
+      id: 'book-kanban-from-the-inside',
+      type: 'bok',
+      title: 'Kanban from the Inside',
+      summary: 'Explains the Kanban Method through nine values (transparency, balance, collaboration, customer focus, flow, leadership, understanding, agreement and respect), plus STATIK, a step-by-step approach to introducing Kanban.',
+      wedges: ['agile-lean'],
+      link: '../en/index.html#lashornan',
+      source: 'Mike Burrows',
+      extra: null
     }
   ];
 
@@ -490,7 +601,7 @@
     'self-mastery': 'Self Mastery'
   };
 
-  var typeLabels = { koncept: 'CONCEPT', ovning: 'EXERCISE', lasning: 'READING' };
+  var typeLabels = { koncept: 'CONCEPT', ovning: 'EXERCISE', lasning: 'READING', bok: 'BOOK' };
 
   function renderToolCard(item) {
     var extraHtml = item.extra ? '<span class="attrib-extra">' + item.extra + '</span>' : '';
@@ -504,6 +615,9 @@
     if (item.type === 'lasning') {
       attribHtml = '<div class="attrib-note">External reading &middot; Source: <a href="' + item.link + '" target="_blank" rel="noopener">' + item.source + '</a></div>';
       linkText = 'Read at ' + item.source + ' ↗';
+    } else if (item.type === 'bok') {
+      attribHtml = '<div class="attrib-note">From my reading corner &middot; Author: ' + item.source + '</div>';
+      linkText = 'See the full reading corner ↗';
     } else {
       attribHtml = '' +
         '<div class="attrib-note">' +
