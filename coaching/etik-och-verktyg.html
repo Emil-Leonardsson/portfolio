@@ -46,17 +46,20 @@
 <!-- ================= SJÄLVSKATTNING ================= -->
 <section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-head"><h2>Min självskattning</h2></div>
-    <p class="section-intro">
-      Ett sätt att visualisera var jag står idag i förhållande till Agile Coaching Growth Wheels
-      kompetenser. Skalan bygger på Growth Wheels fem kompetensnivåer (baserade på Dreyfus-modellen
-      för kompetensutveckling): Beginner, Advanced Beginner, Practitioner, Guide och Catalyst, från
-      grundläggande textbokskunskap till att själv utveckla nya angreppssätt. Hela beskrivningen finns i
-      <a href="https://agilecoachinggrowthwheel.org/wp-content/uploads/2023/06/Agile-Coaching-Growth-Wheel-Version-3.2.pdf" target="_blank" rel="noopener">originalguiden (PDF)</a>.
-      Värdena nedan är preliminära, jag fyller på med en riktig självskattning efter
-      hand som jag blir säkrare på var jag faktiskt står.
-    </p>
-    <span class="tag warn" style="margin-top:12px; display:inline-block;">Preliminära värden</span>
+    <div class="wheel-grid">
+      <div>
+        <div class="section-head"><h2>Min självskattning</h2></div>
+        <p class="section-intro">
+          Ett sätt att visualisera var jag står idag i förhållande till Agile Coaching Growth Wheels
+          kompetenser. Skalan bygger på Growth Wheels fem kompetensnivåer (baserade på Dreyfus-modellen
+          för kompetensutveckling): Beginner, Advanced Beginner, Practitioner, Guide och Catalyst, från
+          grundläggande textbokskunskap till att själv utveckla nya angreppssätt. Hela beskrivningen finns i
+          <a href="https://agilecoachinggrowthwheel.org/wp-content/uploads/2023/06/Agile-Coaching-Growth-Wheel-Version-3.2.pdf" target="_blank" rel="noopener">originalguiden (PDF)</a>.
+          Värdena nedan är preliminära, jag fyller på med en riktig självskattning efter
+          hand som jag blir säkrare på var jag faktiskt står.
+        </p>
+        <span class="tag warn" style="margin-top:12px; display:inline-block;">Preliminära värden</span>
+      </div>
 
     <div class="radar-wrap">
       <svg class="radar-svg" viewBox="0 45 600 510" role="img" aria-label="Självskattning över Agile Coaching Growth Wheels kompetenser, preliminära värden">
@@ -125,6 +128,7 @@
         <text class="radar-label" x="222.1" y="73" text-anchor="end"><tspan x="222.1">Self</tspan><tspan x="222.1" dy="11">Mastery</tspan></text>
       </svg>
       <div class="radar-tooltip" id="radarTooltip"></div>
+    </div>
     </div>
 
     <div class="subgrid" style="grid-template-columns:1fr; margin-top:16px;">
