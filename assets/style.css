@@ -72,6 +72,23 @@
   .tab-back{font-size:13px; font-weight:600; color:var(--ink-soft); text-decoration:none; white-space:nowrap;}
   .tab-back:hover{color:var(--ink);}
 
+  .tab-links-mobile{
+    display:none; list-style:none; margin:0; padding:8px 24px 18px; flex-direction:column; gap:2px;
+    border-top:1px solid var(--line);
+  }
+  .tab-links-mobile.open{display:flex;}
+  .tab-links-mobile a{
+    display:block; padding:12px 4px; text-decoration:none; color:var(--ink); font-weight:500; font-size:15px;
+    border-bottom:1px solid var(--line);
+  }
+  .tab-links-mobile a.active{color:var(--teal); font-weight:700;}
+  .tab-links-mobile li:last-child a{border-bottom:none;}
+
+  @media (max-width:880px){
+    .tab-links, .tab-back, .tab-lang{display:none;}
+    .tab-nav .burger{display:flex;}
+  }
+
   /* ---------- HERO ---------- */
   .hero{padding:38px 0 28px;}
   .hero-top{display:grid; grid-template-columns:1fr; gap:48px; align-items:start;}
