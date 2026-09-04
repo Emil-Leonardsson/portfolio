@@ -326,12 +326,10 @@
 .tmpl-cell h5{font-family:'Spectral',serif; font-size:15px; font-weight:600; color:var(--teal); margin:0;}
 .tmpl-prompt{font-size:13px; color:var(--ink-soft); font-style:italic; margin:0; line-height:1.5;}
 .tmpl-write{flex-grow:1; min-height:46px; border:1px dashed var(--line); border-radius:6px; background:var(--paper);}
-.tmpl-cardset{margin-top:32px;}
-.tmpl-cardgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
-@media (max-width:860px){.tmpl-cardgrid{grid-template-columns:1fr;}}
-.tmpl-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; gap:10px;}
-.tmpl-card h5{font-family:'Spectral',serif; font-size:16px; font-weight:600; color:var(--teal); margin:0;}
-.tmpl-card p{color:var(--ink-soft); font-size:13.5px; margin:0; font-style:italic; line-height:1.5;}
+textarea.tmpl-write{width:100%; box-sizing:border-box; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--ink); padding:8px 10px; line-height:1.5; resize:vertical; outline:none;}
+textarea.tmpl-write:focus{border-color:var(--teal); border-style:solid; background:var(--panel);}
+.tmpl-actions{margin-top:20px; padding-top:16px; border-top:1px solid var(--line); text-align:right;}
+button.btn{font-family:'Inter',sans-serif; border:none; cursor:pointer;}
 .split-two{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px;}
 @media (max-width:760px){.split-two{grid-template-columns:1fr;}}
 .split-col{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px;}

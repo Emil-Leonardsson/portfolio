@@ -6,7 +6,7 @@
 <title>Coaching agreement & alliance — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=29">
+<link rel="stylesheet" href="../assets/style.css?v=30">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -49,7 +49,7 @@
     </div>
     <span class="tag warn" style="margin-top:16px; display:inline-block;">Preliminary draft</span>
 
-    <div class="tmpl-canvas">
+    <div class="tmpl-canvas" id="canvas-avtal" data-pdf-title="Coaching Agreement (with the Sponsor)">
       <div class="tmpl-header">
         <h4>Coaching Agreement (with the Sponsor)</h4>
         <p>The first conversation, with whoever commissions or sponsors the coaching. Sets the formal frame.</p>
@@ -58,87 +58,93 @@
         <div class="tmpl-cell">
           <h5>Goals & success criteria</h5>
           <p class="tmpl-prompt">What should the coaching lead to, and how will we know it worked?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Timeframe</h5>
           <p class="tmpl-prompt">How long does the engagement run, and when do we check in?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Frames & mandate</h5>
           <p class="tmpl-prompt">What mandate do I have as coach, and where are the boundaries?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Budget & scope</h5>
           <p class="tmpl-prompt">What's included, and what does it cost?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Boundaries</h5>
           <p class="tmpl-prompt">What's explicitly not included in this engagement?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Confidentiality</h5>
           <p class="tmpl-prompt">What the sponsor can and can't know about what happens in the coaching.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Feedback</h5>
           <p class="tmpl-prompt">How and when the sponsor gets updates, without breaking the client's confidentiality.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Availability</h5>
           <p class="tmpl-prompt">The practical conditions I need to be able to deliver.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
+      </div>
+      <div class="tmpl-actions">
+        <button type="button" class="btn btn-primary tmpl-pdf-btn" data-canvas="canvas-avtal">Download as PDF ↓</button>
       </div>
     </div>
 
-    <div class="tmpl-cardset">
+    <div class="tmpl-canvas" id="canvas-alliance" data-pdf-title="Alliance (with Team/Client)">
       <div class="tmpl-header">
         <h4>Alliance (with Team/Client)</h4>
         <p>The deeper conversation, with the team or individual actually being coached. Builds the real relationship.</p>
       </div>
-      <div class="tmpl-cardgrid">
-        <div class="tmpl-card">
+      <div class="tmpl-grid">
+        <div class="tmpl-cell">
           <h5>Sub-goals</h5>
-          <p>Concrete steps that feel meaningful to them, not just the sponsor's goal.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Concrete steps that feel meaningful to them, not just the sponsor's goal.</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Agreement to try</h5>
-          <p>A genuine, stated yes, not silent acceptance.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">A genuine, stated yes, not silent acceptance.</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Buy-in</h5>
-          <p>What shows they actually want this?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">What shows they actually want this?</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Conditions</h5>
-          <p>What needs to be true for this to actually work for them?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">What needs to be true for this to actually work for them?</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Known risks & resistance</h5>
-          <p>Name openly what could get in the way: time pressure, bad past experiences, reluctance.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Name openly what could get in the way: time pressure, bad past experiences, reluctance.</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Confidentiality</h5>
-          <p>Reaffirmed from their perspective: what stays with me.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Reaffirmed from their perspective: what stays with me.</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Availability</h5>
-          <p>Do they actually have the time and space to engage?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Do they actually have the time and space to engage?</p>
+          <textarea class="tmpl-write" placeholder="Write here…"></textarea>
         </div>
+      </div>
+      <div class="tmpl-actions">
+        <button type="button" class="btn btn-primary tmpl-pdf-btn" data-canvas="canvas-alliance">Download as PDF ↓</button>
       </div>
     </div>
   </div>
@@ -159,6 +165,8 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../assets/tmpl-pdf.js"></script>
 <script src="../assets/version-check.js"></script>
 
 </body>

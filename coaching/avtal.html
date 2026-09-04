@@ -6,7 +6,7 @@
 <title>Coachingavtal & Alliance — Coaching | Emil Leonardsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=29">
+<link rel="stylesheet" href="../assets/style.css?v=30">
 <script data-goatcounter="https://emil-leonardsson.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -49,7 +49,7 @@
     </div>
     <span class="tag warn" style="margin-top:16px; display:inline-block;">Preliminärt utkast</span>
 
-    <div class="tmpl-canvas">
+    <div class="tmpl-canvas" id="canvas-avtal" data-pdf-title="Coachingavtal (med Beställaren)">
       <div class="tmpl-header">
         <h4>Coachingavtal (med Beställaren)</h4>
         <p>Det första samtalet, med den som beställer eller sponsrar coachingen. Sätter de formella ramarna.</p>
@@ -58,87 +58,93 @@
         <div class="tmpl-cell">
           <h5>Mål & framgångskriterier</h5>
           <p class="tmpl-prompt">Vad ska coachingen leda till, och hur vet vi att det lyckats?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Tid & tidsram</h5>
           <p class="tmpl-prompt">Hur länge pågår engagemanget, och när checkar vi av?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Ramar & mandat</h5>
           <p class="tmpl-prompt">Vilket mandat har jag som coach, och var går gränserna?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Budget & scope</h5>
           <p class="tmpl-prompt">Vad ingår, och vad kostar det?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Avgränsningar</h5>
           <p class="tmpl-prompt">Vad ingår uttryckligen inte i det här uppdraget?</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Konfidentialitet</h5>
           <p class="tmpl-prompt">Vad Beställaren får och inte får veta om vad som sker i coachingen.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Återkoppling</h5>
           <p class="tmpl-prompt">Hur och när Beställaren får uppdateringar, utan att bryta klientens sekretess.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
         <div class="tmpl-cell">
           <h5>Tillgänglighet</h5>
           <p class="tmpl-prompt">De praktiska förutsättningarna jag behöver för att kunna leverera.</p>
-          <div class="tmpl-write"></div>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
+      </div>
+      <div class="tmpl-actions">
+        <button type="button" class="btn btn-primary tmpl-pdf-btn" data-canvas="canvas-avtal">Ladda ner som PDF ↓</button>
       </div>
     </div>
 
-    <div class="tmpl-cardset">
+    <div class="tmpl-canvas" id="canvas-alliance" data-pdf-title="Alliance (med Team/Klient)">
       <div class="tmpl-header">
         <h4>Alliance (med Team/Klient)</h4>
         <p>Det fördjupade samtalet, med teamet eller individen som faktiskt ska coachas. Bygger den verkliga relationen.</p>
       </div>
-      <div class="tmpl-cardgrid">
-        <div class="tmpl-card">
+      <div class="tmpl-grid">
+        <div class="tmpl-cell">
           <h5>Delmål</h5>
-          <p>Konkreta steg som känns meningsfulla för dem själva, inte bara Beställarens mål.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Konkreta steg som känns meningsfulla för dem själva, inte bara Beställarens mål.</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Överens om att försöka</h5>
-          <p>Ett äkta, uttalat ja, inte ett tyst accepterande.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Ett äkta, uttalat ja, inte ett tyst accepterande.</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Buy-in</h5>
-          <p>Vad visar att de faktiskt vill det här?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Vad visar att de faktiskt vill det här?</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Förutsättningar</h5>
-          <p>Vad behöver vara sant för att det ska funka för dem i praktiken?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Vad behöver vara sant för att det ska funka för dem i praktiken?</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Kända risker & motstånd</h5>
-          <p>Namnge öppet det som kan bli hinder: tidsbrist, dåliga tidigare erfarenheter, ovilja.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Namnge öppet det som kan bli hinder: tidsbrist, dåliga tidigare erfarenheter, ovilja.</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Konfidentialitet</h5>
-          <p>Bekräftat från deras perspektiv: vad stannar hos mig.</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Bekräftat från deras perspektiv: vad stannar hos mig.</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
-        <div class="tmpl-card">
+        <div class="tmpl-cell">
           <h5>Tillgänglighet</h5>
-          <p>Har de faktiskt tid och utrymme att engagera sig?</p>
-          <div class="tmpl-write"></div>
+          <p class="tmpl-prompt">Har de faktiskt tid och utrymme att engagera sig?</p>
+          <textarea class="tmpl-write" placeholder="Skriv här…"></textarea>
         </div>
+      </div>
+      <div class="tmpl-actions">
+        <button type="button" class="btn btn-primary tmpl-pdf-btn" data-canvas="canvas-alliance">Ladda ner som PDF ↓</button>
       </div>
     </div>
   </div>
@@ -159,6 +165,8 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../assets/tmpl-pdf.js"></script>
 <script src="../assets/version-check.js"></script>
 
 </body>
