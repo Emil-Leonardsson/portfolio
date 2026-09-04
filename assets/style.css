@@ -316,6 +316,22 @@
 .flow-list li:last-child{border-bottom:1px solid var(--line);}
 .flow-list li b{color:var(--ink); font-family:'Spectral',serif; font-size:16px; font-weight:600; display:block; margin-bottom:4px;}
 .flow-list li .n{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:13px; padding-top:2px;}
+.tmpl-canvas{border:2px solid var(--ink); border-radius:var(--radius); padding:24px; margin-top:32px; background:var(--panel);}
+.tmpl-header{text-align:center; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--line);}
+.tmpl-header h4{font-family:'Spectral',serif; font-size:20px; font-weight:600; color:var(--ink); margin:0 0 6px;}
+.tmpl-header p{color:var(--ink-soft); font-size:14px; margin:0;}
+.tmpl-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+@media (max-width:640px){.tmpl-grid{grid-template-columns:1fr;}}
+.tmpl-cell{border:1px solid var(--line); border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:8px;}
+.tmpl-cell h5{font-family:'Spectral',serif; font-size:15px; font-weight:600; color:var(--teal); margin:0;}
+.tmpl-prompt{font-size:13px; color:var(--ink-soft); font-style:italic; margin:0; line-height:1.5;}
+.tmpl-write{flex-grow:1; min-height:46px; border:1px dashed var(--line); border-radius:6px; background:var(--paper);}
+.tmpl-cardset{margin-top:32px;}
+.tmpl-cardgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+@media (max-width:860px){.tmpl-cardgrid{grid-template-columns:1fr;}}
+.tmpl-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; gap:10px;}
+.tmpl-card h5{font-family:'Spectral',serif; font-size:16px; font-weight:600; color:var(--teal); margin:0;}
+.tmpl-card p{color:var(--ink-soft); font-size:13.5px; margin:0; font-style:italic; line-height:1.5;}
 .split-two{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px;}
 @media (max-width:760px){.split-two{grid-template-columns:1fr;}}
 .split-col{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px;}
