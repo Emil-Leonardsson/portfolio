@@ -307,6 +307,13 @@
   footer .btn-primary{background:var(--gold); color:#1E2A32;}
   footer .btn-ghost{border-color:#3B4B4A; color:#fff;}
   .foot-bottom{display:flex; justify-content:space-between; margin-top:60px; padding-top:24px; border-top:1px solid #33413F; font-size:12.5px; color:#8FA09C; flex-wrap:wrap; gap:10px; font-family:'IBM Plex Mono',monospace;}
+  .foot-bottom a{color:inherit; text-decoration:underline; text-decoration-color:#33413F; text-underline-offset:2px;}
+  .foot-bottom a:hover{color:#fff;}
+
+  .coach-teaser{background:var(--teal-soft); border:1px solid var(--teal); border-radius:var(--radius); padding:16px 22px; margin-top:28px;}
+  .coach-teaser p{margin:0; font-size:14.5px; color:var(--ink);}
+  .coach-teaser a{font-weight:700; text-decoration:none; color:var(--teal); white-space:nowrap;}
+  .coach-teaser a:hover{color:var(--ink);}
 
 /* ---------- Shared: sub-page elements (case studies etc.) ---------- */
 .backlink{
