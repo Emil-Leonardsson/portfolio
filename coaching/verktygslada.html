@@ -625,6 +625,81 @@
       link: 'https://teamtopologies.com/key-concepts',
       source: 'Matthew Skelton & Manuel Pais',
       extra: null
+    },
+    {
+      id: 'kraftfulla-fragor',
+      type: 'koncept',
+      title: 'Kraftfulla frågor',
+      summary: 'En samling öppna coachingfrågor att ha nära till hands i samtal, till exempel "Vad mer?", "Vad riskerar du?" och "Vad har du provat hittills?". Tänkta att hjälpa den jag coachar hitta sina egna svar, inte mina.',
+      wedges: ['coaching'],
+      link: '../assets/kunskapsbank/powerful-questions.pdf',
+      extra: null
+    },
+    {
+      id: 'cld-orsak-verkan-diagram',
+      type: 'koncept',
+      title: 'Orsak-verkan-diagram (CLD)',
+      summary: 'Ett konkret exempel på hur ett orsak-verkan-diagram kan visa varför problem uppstår och återkommer i en organisation, till exempel hur tidsbrist, för lite testning och icke-agil styrning tillsammans driver försämrad leverans. Ett systemtänk-verktyg för att hitta rätt insats, inte bara symptomet.',
+      wedges: ['leading'],
+      link: '../assets/kunskapsbank/cld-exempel.pdf',
+      extra: null
+    },
+    {
+      id: 'den-irriterade-kursledaren',
+      type: 'ovning',
+      title: 'Den irriterade kursledaren',
+      summary: 'Ett kort case om en kursledare vars automatiska, ogenomtänkta tolkningar av en kollegas agerande snabbt eskalerar till misstro och passivt aggressivt beteende. En övning i att känna igen sina egna snabba, ofta felaktiga, tankar innan de styr handlingen.',
+      wedges: ['self-mastery'],
+      link: '../assets/kunskapsbank/den-irriterade-kursledaren.pdf',
+      extra: null
+    },
+    {
+      id: 'neutral-tolkning-domande',
+      type: 'ovning',
+      title: 'Neutral iakttagelse eller tolkning?',
+      summary: 'Sju påståenden att sortera: är det en neutral iakttagelse, eller en tolkning/bedömning som klätts ut som ett faktum? Ett enkelt sätt att träna sig på skillnaden, en förutsättning för att kunna ge ärlig, icke-dömande feedback.',
+      wedges: ['self-mastery'],
+      link: '../assets/kunskapsbank/neutral-tolkning-domande.pdf',
+      extra: null
+    },
+    {
+      id: 'wheelan-teamfaser-ledarroll',
+      type: 'ovning',
+      title: 'Matcha teamfas med ledarroll',
+      summary: 'En parövning: matcha Susan Wheelans fyra teamfaser (Tillhörighet & trygghet, Opposition & konflikt, Tillit & struktur, Arbete & produktivitet) med det förhållningssätt som faktiskt hjälper laget i just den fasen, från tydlig vägvisare till coachande facilitator. Ett komplement till "En modell för teamutveckling" med fokus på ledarens roll.',
+      wedges: ['leading'],
+      link: '../assets/kunskapsbank/wheelan-teamfaser-ledarroll.pdf',
+      extra: null
+    },
+    {
+      id: 'six-trumps',
+      type: 'lasning',
+      title: 'The Six Trumps',
+      summary: 'Sex hjärnbaserade principer som komplement till 4Cs: Rörelse slår stillasittande, Prat slår lyssnande, Bilder slår ord, Skrivande slår läsande, Kortare slår längre, Olika slår samma. Praktiska påminnelser för att designa utbildning som faktiskt fastnar.',
+      wedges: ['guiding-learning'],
+      link: 'https://www.bowperson.com/2018/08/2-free-infographics-for-you-the-4cs-and-the-6-trumps/',
+      source: 'Sharon Bowman, Training from the BACK of the Room!',
+      extra: null
+    },
+    {
+      id: 'bridges-transition-model',
+      type: 'lasning',
+      title: 'Bridges förändringsmodell (Transition Model)',
+      summary: 'Skiljer på förändring (den yttre händelsen) och övergång (den inre processen): Avslut, Den neutrala zonen och Nya början. Hjälper mig förstå varför folk reagerar med förlust och motstånd innan de kan ta till sig något nytt, och vad jag som coach kan göra i varje fas.',
+      wedges: ['leading'],
+      link: 'https://wmbridges.com/about/what-is-transition/',
+      source: 'William Bridges Associates',
+      extra: null
+    },
+    {
+      id: 'aci-competency-framework',
+      type: 'lasning',
+      title: 'Agile Coach Competency Framework (ACI)',
+      summary: 'Ett annat välkänt kompetensramverk för agila coacher (skilt från Growth Wheel som jag annars utgår från): teknisk mastery, verksamhetsmastery och transformationsmastery, med undervisning, mentorskap, facilitering och professionell coaching som kärnkompetenser, allt runt en neutral coachande hållning.',
+      wedges: ['self-mastery'],
+      link: 'https://helpingimprove.com/understanding-acis-agile-coach-competency-framework/',
+      source: 'Lyssa Adkins & Michael Spayd, Agile Coaching Institute',
+      extra: null
     }
   ];
 
@@ -658,14 +733,15 @@
       attribHtml = '<div class="attrib-note">Från min läshörna &middot; Författare: ' + item.source + '</div>';
       linkText = 'Se hela läshörnan ↗';
     } else {
+      var isLocalFile = item.link.indexOf('http') !== 0;
       attribHtml = '' +
         '<div class="attrib-note">' +
           'Baserad på material från ProAgile AB, bearbetad och sammanfattad av mig, licensierad under ' +
           '<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> &middot; ' +
-          'Källa: <a href="https://proagile.se/teams" target="_blank" rel="noopener">ProAgile AB</a>' +
+          'Källa: ' + (isLocalFile ? 'ProAgile AB, kursmaterial (Professional Agile Coach)' : '<a href="https://proagile.se/teams" target="_blank" rel="noopener">ProAgile AB</a>') +
           extraHtml +
         '</div>';
-      linkText = 'Läs originalet hos ProAgile ↗';
+      linkText = isLocalFile ? 'Öppna materialet (PDF) ↓' : 'Läs originalet hos ProAgile ↗';
     }
     return '' +
       '<div class="role-card">' +

@@ -625,6 +625,81 @@
       link: 'https://teamtopologies.com/key-concepts',
       source: 'Matthew Skelton & Manuel Pais',
       extra: null
+    },
+    {
+      id: 'kraftfulla-fragor',
+      type: 'koncept',
+      title: 'Powerful Questions',
+      summary: 'A collection of open coaching questions to keep close at hand in conversations, like "What else?", "What is at risk?" and "What have you tried so far?". Meant to help the person I\'m coaching find their own answers, not mine.',
+      wedges: ['coaching'],
+      link: '../assets/kunskapsbank/powerful-questions.pdf',
+      extra: null
+    },
+    {
+      id: 'cld-orsak-verkan-diagram',
+      type: 'koncept',
+      title: 'Causal Loop Diagram (CLD)',
+      summary: 'A worked example of how a causal loop diagram can show why problems arise and recur in an organization, for example how time pressure, too little testing and non-agile management together drive worsened delivery. A systems-thinking tool for finding the right intervention, not just the symptom.',
+      wedges: ['leading'],
+      link: '../assets/kunskapsbank/cld-example.pdf',
+      extra: null
+    },
+    {
+      id: 'den-irriterade-kursledaren',
+      type: 'ovning',
+      title: 'The Upset Trainer',
+      summary: 'A short case about a trainer whose automatic, unexamined interpretations of a colleague\'s actions quickly escalate into distrust and passive-aggressive behavior. An exercise in recognizing your own fast, often wrong, thoughts before they drive your actions.',
+      wedges: ['self-mastery'],
+      link: '../assets/kunskapsbank/den-irriterade-kursledaren.pdf',
+      extra: null
+    },
+    {
+      id: 'neutral-tolkning-domande',
+      type: 'ovning',
+      title: 'Neutral Observation or Judgment?',
+      summary: 'Seven statements to sort: is it a neutral observation, or an interpretation/judgment dressed up as a fact? A simple way to practice telling the difference, a prerequisite for giving honest, non-judgmental feedback.',
+      wedges: ['self-mastery'],
+      link: '../assets/kunskapsbank/neutral-tolkning-domande.pdf',
+      extra: null
+    },
+    {
+      id: 'wheelan-teamfaser-ledarroll',
+      type: 'ovning',
+      title: 'Match Team Stage with Leader Role',
+      summary: 'A matching exercise: pair Susan Wheelan\'s four team stages (Dependency & Inclusion, Counterdependency & Conflict, Trust & Structure, Work & Productivity) with the leadership approach that actually helps the team in that stage, from clear guide to coaching facilitator. A companion to "A Team Development Framework", focused on the leader\'s role.',
+      wedges: ['leading'],
+      link: '../assets/kunskapsbank/wheelan-teamfaser-ledarroll.pdf',
+      extra: null
+    },
+    {
+      id: 'six-trumps',
+      type: 'lasning',
+      title: 'The Six Trumps',
+      summary: 'Six brain-based principles that complement the 4Cs: Movement trumps sitting, Talking trumps listening, Images trump words, Writing trumps reading, Shorter trumps longer, Different trumps same. Practical reminders for designing training that actually sticks.',
+      wedges: ['guiding-learning'],
+      link: 'https://www.bowperson.com/2018/08/2-free-infographics-for-you-the-4cs-and-the-6-trumps/',
+      source: 'Sharon Bowman, Training from the BACK of the Room!',
+      extra: null
+    },
+    {
+      id: 'bridges-transition-model',
+      type: 'lasning',
+      title: 'Bridges Transition Model',
+      summary: 'Distinguishes change (the external event) from transition (the internal process): Endings, the Neutral Zone, and New Beginnings. Helps me understand why people react with loss and resistance before they can embrace something new, and what I as a coach can do in each phase.',
+      wedges: ['leading'],
+      link: 'https://wmbridges.com/about/what-is-transition/',
+      source: 'William Bridges Associates',
+      extra: null
+    },
+    {
+      id: 'aci-competency-framework',
+      type: 'lasning',
+      title: 'Agile Coach Competency Framework (ACI)',
+      summary: 'Another well-known competency framework for agile coaches (distinct from the Growth Wheel I otherwise use): technical mastery, business mastery and transformation mastery, with teaching, mentoring, facilitating and professional coaching as core competencies, all around a neutral coaching stance.',
+      wedges: ['self-mastery'],
+      link: 'https://helpingimprove.com/understanding-acis-agile-coach-competency-framework/',
+      source: 'Lyssa Adkins & Michael Spayd, Agile Coaching Institute',
+      extra: null
     }
   ];
 
@@ -658,14 +733,15 @@
       attribHtml = '<div class="attrib-note">From my reading corner &middot; Author: ' + item.source + '</div>';
       linkText = 'See the full reading corner ↗';
     } else {
+      var isLocalFile = item.link.indexOf('http') !== 0;
       attribHtml = '' +
         '<div class="attrib-note">' +
           'Adapted from material by ProAgile AB, reworked and summarized by me, licensed under ' +
           '<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> &middot; ' +
-          'Source: <a href="https://proagile.se/teams" target="_blank" rel="noopener">ProAgile AB</a>' +
+          'Source: ' + (isLocalFile ? 'ProAgile AB, course material (Professional Agile Coach)' : '<a href="https://proagile.se/teams" target="_blank" rel="noopener">ProAgile AB</a>') +
           extraHtml +
         '</div>';
-      linkText = 'Read the original at ProAgile ↗';
+      linkText = isLocalFile ? 'Open the material (PDF) ↓' : 'Read the original at ProAgile ↗';
     }
     return '' +
       '<div class="role-card">' +
