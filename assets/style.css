@@ -208,16 +208,15 @@
   .result-list li p{margin:0; color:var(--ink);}
 
   /* ---------- CERTIFIERINGAR ---------- */
-  .cert-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px;}
-  @media (max-width:860px){.cert-grid{grid-template-columns:1fr 1fr;}}
+  .cert-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:32px;}
   @media (max-width:600px){.cert-grid{grid-template-columns:1fr;}}
   .cert-card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px;}
   .cert-card .yr{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft);}
   .cert-card h4{font-size:15.5px; margin-top:6px;}
   .cert-card.has-badge{display:flex; align-items:stretch; padding:0; overflow:hidden;}
-  .cert-badge-panel{background:var(--teal-soft); flex-shrink:0; width:92px; display:flex; align-items:center; justify-content:center; padding:12px;}
-  .cert-badge-img{width:60px; height:60px; object-fit:contain;}
-  .cert-card.has-badge .cert-info{padding:18px 20px;}
+  .cert-badge-panel{background:var(--teal-soft); flex-shrink:0; width:128px; display:flex; align-items:center; justify-content:center; padding:16px;}
+  .cert-badge-img{width:92px; height:92px; object-fit:contain;}
+  .cert-card.has-badge .cert-info{padding:20px 22px;}
 
   /* ---------- Attribution / license note (CC BY-SA sourced content) ---------- */
   .attrib-note{font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.6; color:var(--ink-soft); background:var(--gold-soft); border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-top:4px;}
