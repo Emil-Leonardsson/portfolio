@@ -214,8 +214,10 @@
   .cert-card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px;}
   .cert-card .yr{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft);}
   .cert-card h4{font-size:15.5px; margin-top:6px;}
-  .cert-card.has-badge{display:flex; flex-direction:column; gap:14px;}
-  .cert-badge-img{width:88px; height:88px; object-fit:contain; align-self:flex-start;}
+  .cert-card.has-badge{display:flex; align-items:stretch; padding:0; overflow:hidden;}
+  .cert-badge-panel{background:var(--teal-soft); flex-shrink:0; width:92px; display:flex; align-items:center; justify-content:center; padding:12px;}
+  .cert-badge-img{width:60px; height:60px; object-fit:contain;}
+  .cert-card.has-badge .cert-info{padding:18px 20px;}
 
   /* ---------- Attribution / license note (CC BY-SA sourced content) ---------- */
   .attrib-note{font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.6; color:var(--ink-soft); background:var(--gold-soft); border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-top:4px;}
