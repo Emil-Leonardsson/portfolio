@@ -81,7 +81,8 @@
         <div class="role-toggle" id="roleToggle">
           <button class="role-btn active" data-role="sm">Scrum Master</button>
           <button class="role-btn" data-role="po">Product Owner</button>
-          <button class="role-btn" data-role="dl">Delivery Lead/RTE</button>
+          <button class="role-btn" data-role="dl">Delivery Lead</button>
+          <button class="role-btn" data-role="rte">RTE/Agile Coach</button>
         </div>
         <div class="role-desc" id="roleDesc">
           <b>As a Scrum Master</b> I facilitate clear Scrum events, coach teams toward self‑organization and psychological safety, and remove impediments before they slow down delivery.
@@ -101,7 +102,7 @@
     <div class="facts">
       <div><b>16 years</b><span>Of agile roles in product development: from tester and test lead to Scrum Master, project manager, Product Owner and Product Manager/Delivery Lead/RTE.</span></div>
       <div><b>7</b><span>Certifications from Scrum.org, ICAgile and others.</span></div>
-      <div><b>3</b><ul><li>Scrum Master</li><li>Product Owner</li><li>Delivery Lead/RTE</li></ul></div>
+      <div><b>4</b><ul><li>Scrum Master</li><li>Product Owner</li><li>Delivery Lead</li><li>RTE/Agile Coach</li></ul></div>
       <div><b>Scrum, Kanban, SAFe</b><span>Multi-team & ART‑collaboration</span></div>
     </div>
   </div>
@@ -577,7 +578,8 @@
   const descriptions = {
     sm: '<b>As a Scrum Master</b> I facilitate clear Scrum‑events, coach teams toward self-organization and psychological safety, and remove impediments before they slow down delivery. I use GROW and CLEAR as coaching frameworks to build focus, ownership and continuous improvement.',
     po: '<b>As a Product Owner</b> I break down unclear needs into clear priorities and a backlog that actually drives value. I work closely with the customer, UX and architecture to make sure we build the right thing and that every decision is grounded in both user value and technical reality.',
-    dl: '<b>As a Delivery Lead and Release Train Engineer</b> I drive end‑to‑end delivery across multiple teams: PI‑planning, Scrum of Scrums and managing dependencies across multiple teams at once. My focus is predictability, quality and creating a flow where teams can deliver without obstacles.'
+    dl: '<b>As a Project Manager and Delivery Lead</b> I lead complex delivery projects from planning to close, owning budget, timeline and risk management. I create clear decision material and alignment between the dev team, client and leadership.',
+    rte: '<b>As a Release Train Engineer and Agile Coach</b> I coordinate delivery across multiple teams in a scaled agile setting: PI‑planning, Scrum of Scrums and dependency management. I coach teams and Scrum Masters toward greater maturity and self-sufficiency.'
   };
   document.querySelectorAll('.role-btn').forEach(btn => {
     btn.addEventListener('click', () => {

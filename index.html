@@ -83,7 +83,8 @@
         <div class="role-toggle" id="roleToggle">
           <button class="role-btn active" data-role="sm">Scrum Master</button>
           <button class="role-btn" data-role="po">Product Owner</button>
-          <button class="role-btn" data-role="dl">Delivery Lead/RTE</button>
+          <button class="role-btn" data-role="dl">Delivery Lead</button>
+          <button class="role-btn" data-role="rte">RTE/Agile Coach</button>
         </div>
         <div class="role-desc" id="roleDesc">
           <b>Som Scrum Master</b> faciliterar jag tydliga Scrum‑events, coachar team mot självorganisering och psykologisk trygghet, och tar bort hinder innan de bromsar leveransen.
@@ -103,7 +104,7 @@
     <div class="facts">
       <div><b>16 år</b><span>Av agila roller inom produktutveckling: från testare och test lead till Scrum Master, projektledare, Product Owner och Product Manager/Delivery Lead/RTE.</span></div>
       <div><b>7</b><span>Certifieringar Scrum.org, ICAgile m.fl.</span></div>
-      <div><b>3</b><ul><li>Scrum Master</li><li>Product Owner</li><li>Delivery Lead/RTE</li></ul></div>
+      <div><b>4</b><ul><li>Scrum Master</li><li>Product Owner</li><li>Delivery Lead</li><li>RTE/Agile Coach</li></ul></div>
       <div><b>Scrum, Kanban, SAFe</b><span>Multi-team & ART‑samverkan</span></div>
     </div>
   </div>
@@ -615,7 +616,8 @@
   const descriptions = {
     sm: '<b>Som Scrum Master</b> faciliterar jag tydliga Scrum‑events, coachar team mot självorganisering och psykologisk trygghet, och tar bort hinder innan de bromsar leveransen. Jag arbetar med GROW och CLEAR som coachingramverk för att skapa fokus, ansvar och kontinuerlig förbättring.',
     po: '<b>Som Product Owner</b> bryter jag ner otydliga behov till tydliga prioriteringar och en backlog som faktiskt driver värde. Jag arbetar nära kund, UX och arkitektur för att säkerställa att vi bygger rätt sak och att varje beslut är förankrat i både användarnytta och tekniska realiteter.',
-    dl: '<b>Som Delivery Lead och Release Train Engineer</b> driver jag leverans end‑to‑end över flera team: PI‑planning, Scrum of Scrums och beroendehantering över flera team samtidigt. Mitt fokus är förutsägbarhet, kvalitet och att skapa ett flöde där teamen kan leverera utan hinder.'
+    dl: '<b>Som Projektledare och Delivery Lead</b> leder jag komplexa leveransprojekt från planering till avslut, med ansvar för budget, tidplan och riskhantering. Jag skapar tydliga beslutsunderlag och samsyn mellan utvecklingsteam, kund och ledning.',
+    rte: '<b>Som Release Train Engineer och Agile Coach</b> koordinerar jag leverans över flera team i skalad agil miljö: PI‑planning, Scrum of Scrums och beroendehantering. Jag coachar team och Scrum Masters mot ökad mognad och självständighet.'
   };
   document.querySelectorAll('.role-btn').forEach(btn => {
     btn.addEventListener('click', () => {
