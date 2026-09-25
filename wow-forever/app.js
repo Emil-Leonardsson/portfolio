@@ -94,16 +94,18 @@
     const race = D.findRace(ch.faction, ch.race);
     const allowed = race ? race.classes.includes(cls) : false;
     const on = ch.class === cls;
-    return `<button type="button" class="pick cls${on ? ' on' : ''}" data-act="class" data-i="${i}" data-class="${cls}"
-      ${allowed ? '' : 'disabled'} title="${cls}" aria-pressed="${on}">${sprite('class', cls, 76, 'fluid')}<span class="lbl">${cls}</span></button>`;
+    return `<div class="opt${allowed ? "" : " off"}"><span class="lbl">${cls}</span>
+      <button type="button" class="pick cls${on ? " on" : ""}" data-act="class" data-i="${i}" data-class="${cls}"
+      ${allowed ? "" : "disabled"} title="${cls}" aria-label="${cls}" aria-pressed="${on}">${sprite("class", cls, 200, "fluid")}</button></div>`;
   }
 
   function rulesetButton(i, rs, ch) {
     const off = D.unavailableRulesets.includes(rs);
     const on = ch.ruleset === rs && !off;
     const title = off ? `${D.rulesetInfo[rs]} Finns inte vid launch.` : D.rulesetInfo[rs];
-    return `<button type="button" class="pick rs${on ? ' on' : ''}" data-act="ruleset" data-i="${i}" data-ruleset="${rs}"
-      title="${esc(title)}" ${off ? 'disabled' : ''} aria-pressed="${on}">${sprite('ruleset', rs, 76, 'fluid')}<span>${rs}</span>${off ? '<small>Ej vid launch</small>' : ''}</button>`;
+    return `<div class="opt${off ? " off" : ""}"><span class="lbl">${rs}${off ? "<small>Ej vid launch</small>" : ""}</span>
+      <button type="button" class="pick rs${on ? " on" : ""}" data-act="ruleset" data-i="${i}" data-ruleset="${rs}"
+      title="${esc(title)}" aria-label="${rs}" ${off ? "disabled" : ""} aria-pressed="${on}">${sprite("ruleset", rs, 200, "fluid")}</button></div>`;
   }
 
   function renderEditors() {

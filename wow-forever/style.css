@@ -87,12 +87,16 @@ legend { color: var(--gold); font-weight: 700; padding: 0 8px; }
 .pick:hover:not(:disabled) { border-color: var(--gold-dim); }
 .pick.on { border-color: var(--gold); background: rgba(240,200,90,.12); }
 .pick:disabled { opacity: .28; cursor: not-allowed; }
-.pick small { font-size: .62rem; color: var(--muted); }
 .picks.classes, .picks.rulesets { display: grid; gap: 6px; }
 .picks.classes { grid-template-columns: repeat(9, minmax(0, 1fr)); }
-.picks.rulesets { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.picks.classes .pick, .picks.rulesets .pick { min-width: 0; padding: 6px 2px; }
-.picks.classes .pick .lbl { font-size: .7rem; max-width: 100%; overflow: hidden; text-overflow: clip; }
+.picks.rulesets { grid-template-columns: repeat(4, minmax(0, 120px)); gap: 10px; }
+.opt { display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; min-width: 0; }
+.opt .lbl { text-align: center; font-size: .78rem; line-height: 1.15; color: #d4c9b1; }
+.opt .lbl small { display: block; font-size: .62rem; color: var(--muted); }
+.opt.off .lbl { opacity: .45; }
+.opt .pick { width: 100%; aspect-ratio: 1; min-width: 0; padding: 0; overflow: hidden; }
+.picks.classes, .picks.rulesets { margin-bottom: 14px; }
+.opt .pick .sprite { width: 100%; height: 100%; max-width: none; aspect-ratio: auto; }
 .races .picks { display: grid; }
 
 .sprite { display: inline-block; flex: none; background-repeat: no-repeat; border-radius: 6px; border: 1px solid rgba(0,0,0,.6); }
@@ -138,9 +142,9 @@ legend { color: var(--gold); font-weight: 700; padding: 0 8px; }
   .races { grid-template-columns: 1fr; }
   fieldset.char { padding: 12px 8px 14px; }
   .picks.classes { gap: 3px; }
-  .picks.classes .pick { padding: 4px 0; }
-  .picks.classes .pick .lbl { display: none; }
-  .picks.rulesets .pick span { font-size: .68rem; }
+  .picks.classes .opt .lbl { display: none; }
+  .picks.rulesets { gap: 6px; }
+  .picks.rulesets .lbl { font-size: .68rem; }
   .panel { padding: 18px 14px; }
 }
 .picked { color: var(--gold); }
