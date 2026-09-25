@@ -87,8 +87,12 @@ legend { color: var(--gold); font-weight: 700; padding: 0 8px; }
 .pick:hover:not(:disabled) { border-color: var(--gold-dim); }
 .pick.on { border-color: var(--gold); background: rgba(240,200,90,.12); }
 .pick:disabled { opacity: .28; cursor: not-allowed; }
-.pick.rs { min-width: 84px; }
-.picks.classes .pick { min-width: 70px; }
+.pick small { font-size: .62rem; color: var(--muted); }
+.picks.classes, .picks.rulesets { display: grid; gap: 6px; }
+.picks.classes { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.picks.rulesets { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.picks.classes .pick, .picks.rulesets .pick { min-width: 0; padding: 6px 2px; }
+.picks.classes .pick span { font-size: .7rem; max-width: 100%; overflow: hidden; text-overflow: clip; }
 .races .picks { display: grid; }
 
 .sprite { display: inline-block; flex: none; background-repeat: no-repeat; border-radius: 6px; border: 1px solid rgba(0,0,0,.6); }
@@ -132,5 +136,11 @@ legend { color: var(--gold); font-weight: 700; padding: 0 8px; }
 
 @media (max-width: 560px) {
   .races { grid-template-columns: 1fr; }
+  fieldset.char { padding: 12px 8px 14px; }
+  .picks.classes { gap: 3px; }
+  .picks.classes .pick { padding: 4px 0; }
+  .picks.classes .pick span { display: none; }
+  .picks.rulesets .pick span { font-size: .68rem; }
   .panel { padding: 18px 14px; }
 }
+.picked { color: var(--gold); }

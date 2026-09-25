@@ -85,13 +85,15 @@
     const allowed = race ? race.classes.includes(cls) : false;
     const on = ch.class === cls;
     return `<button type="button" class="pick cls${on ? ' on' : ''}" data-act="class" data-i="${i}" data-class="${cls}"
-      ${allowed ? '' : 'disabled'} aria-pressed="${on}">${sprite('class', cls, 36)}<span>${cls}</span></button>`;
+      ${allowed ? '' : 'disabled'} title="${cls}" aria-pressed="${on}">${sprite('class', cls, 32)}<span>${cls}</span></button>`;
   }
 
   function rulesetButton(i, rs, ch) {
-    const on = ch.ruleset === rs;
+    const off = D.unavailableRulesets.includes(rs);
+    const on = ch.ruleset === rs && !off;
+    const title = off ? `${D.rulesetInfo[rs]} Finns inte vid launch.` : D.rulesetInfo[rs];
     return `<button type="button" class="pick rs${on ? ' on' : ''}" data-act="ruleset" data-i="${i}" data-ruleset="${rs}"
-      title="${esc(D.rulesetInfo[rs])}" aria-pressed="${on}">${sprite('ruleset', rs, 40)}<span>${rs}</span></button>`;
+      title="${esc(title)}" ${off ? 'disabled' : ''} aria-pressed="${on}">${sprite('ruleset', rs, 40)}<span>${rs}</span>${off ? '<small>Ej vid launch</small>' : ''}</button>`;
   }
 
   function renderEditors() {
@@ -112,10 +114,10 @@
           <div class="side horde"><h4>Horde</h4><div class="picks">${hordeRaces.map((r) => raceButton(i, r, ch)).join('')}</div></div>
         </div>
 
-        <div class="group-label">Klass ${ch.race ? '' : '<em>(välj race först)</em>'}</div>
+        <div class="group-label">Klass${ch.class ? `: <b class="picked">${ch.class}</b>` : ''} ${ch.race ? '' : '<em>(välj race först)</em>'}</div>
         <div class="picks classes">${D.classes.map((c) => classButton(i, c, ch)).join('')}</div>
 
-        <div class="group-label">Ruleset</div>
+        <div class="group-label">Servertyp</div>
         <div class="picks rulesets">${D.rulesets.map((rs) => rulesetButton(i, rs, ch)).join('')}</div>
 
         <div class="field-row">
@@ -373,7 +375,7 @@
   function fillFilters() {
     $('#fClass').insertAdjacentHTML('beforeend', D.classes.map((c) => `<option>${c}</option>`).join(''));
     $('#fProf').insertAdjacentHTML('beforeend', D.professions.map((p) => `<option>${p}</option>`).join(''));
-    $('#fRuleset').insertAdjacentHTML('beforeend', D.rulesets.map((r) => `<option>${r}</option>`).join(''));
+    $('#fRuleset').insertAdjacentHTML('beforeend', D.rulesets.filter((r) => !D.unavailableRulesets.includes(r)).map((r) => `<option>${r}</option>`).join(''));
     ['#fFaction', '#fClass', '#fProf', '#fRuleset'].forEach((s) => $(s).addEventListener('change', renderRoster));
   }
 

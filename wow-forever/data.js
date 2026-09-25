@@ -28,13 +28,15 @@ window.WF_DATA = (() => {
 
   const classes = ['Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'];
   const rulesets = ['Normal', 'PvP', 'Roleplay', 'Hardcore'];
+  // Servertyper som inte finns vid launch. Tas bort härifrån när de öppnar.
+  const unavailableRulesets = ['Hardcore'];
   const roles = ['Tank', 'Healer', 'DPS'];
 
   const rulesetInfo = {
     Normal: 'Äventyra och slåss mot monster, PvP när du själv vill.',
     PvP: 'Nästan alltid i risk att bli attackerad av andra spelare.',
     Roleplay: 'Strikta namn- och beteenderegler för inlevelse.',
-    Hardcore: 'Permanent död. Döda karaktärer kan flyttas till andra ruleset.',
+    Hardcore: 'Permanent död. Döda karaktärer kan flyttas till andra servertyper.',
   };
 
   // Standardyrken. Kontrollera mot WoW Forever när det släpps.
@@ -81,7 +83,7 @@ window.WF_DATA = (() => {
   const findRace = (faction, race) => races.find((r) => r.faction === faction && r.race === race);
 
   return {
-    races, classes, rulesets, roles, rulesetInfo, professions, secondaryProfessions,
+    races, classes, rulesets, unavailableRulesets, roles, rulesetInfo, professions, secondaryProfessions,
     sheets, crops, raceKey, findRace,
   };
 })();
