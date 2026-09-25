@@ -103,7 +103,7 @@
     const off = D.unavailableRulesets.includes(rs);
     const on = ch.ruleset === rs && !off;
     const title = off ? `${D.rulesetInfo[rs]} Finns inte vid launch.` : D.rulesetInfo[rs];
-    return `<div class="opt${off ? " off" : ""}"><span class="lbl">${rs}${off ? "<small>Ej vid launch</small>" : ""}</span>
+    return `<div class="opt${off ? " off" : ""}" title="${esc(title)}"><span class="lbl">${rs}</span>
       <button type="button" class="pick rs${on ? " on" : ""}" data-act="ruleset" data-i="${i}" data-ruleset="${rs}"
       title="${esc(title)}" aria-label="${rs}" ${off ? "disabled" : ""} aria-pressed="${on}">${sprite("ruleset", rs, 200, "fluid")}</button></div>`;
   }
