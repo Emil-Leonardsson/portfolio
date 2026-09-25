@@ -57,7 +57,7 @@
   // ---------- Formulärets tillstånd ----------
   const emptyChar = () => ({
     name: '', faction: '', race: '', class: '', ruleset: 'Normal',
-    prof1: '', prof2: '', secondary: [], role: '',
+    prof1: '', prof2: '', secondary: [], roles: [],
   });
   let chars = [emptyChar()];
   let editToken = null;
@@ -123,10 +123,11 @@
         <div class="field-row">
           <label class="field"><span>Yrke 1</span><select data-f="prof1" data-i="${i}">${profOptions(ch.prof1)}</select></label>
           <label class="field"><span>Yrke 2</span><select data-f="prof2" data-i="${i}">${profOptions(ch.prof2)}</select></label>
-          <label class="field"><span>Roll <em>(valfritt)</em></span>
-            <select data-f="role" data-i="${i}"><option value="">Vet inte</option>${D.roles.map((r) => `<option${r === ch.role ? ' selected' : ''}>${r}</option>`).join('')}</select>
-          </label>
         </div>
+
+        <div class="group-label">Roller <em>(valfritt, välj flera)</em></div>
+        <div class="secondary">${D.roles.map((r) =>
+          `<label class="tick"><input type="checkbox" data-f="roles" data-i="${i}" value="${r}"${ch.roles.includes(r) ? ' checked' : ''}> ${r}</label>`).join('')}</div>
 
         <div class="group-label">Sekundära yrken</div>
         <div class="secondary">${D.secondaryProfessions.map((s) =>
@@ -144,7 +145,7 @@
       const el = e.target;
       const i = Number(el.dataset.i);
       if (!chars[i] || !el.dataset.f) return;
-      if (el.dataset.f === 'secondary') return;
+      if (el.dataset.f === 'secondary' || el.dataset.f === 'roles') return;
       chars[i][el.dataset.f] = el.value;
     });
 
@@ -152,10 +153,11 @@
       const el = e.target;
       const i = Number(el.dataset.i);
       if (!chars[i]) return;
-      if (el.dataset.f === 'secondary') {
-        const set = new Set(chars[i].secondary);
+      if (el.dataset.f === 'secondary' || el.dataset.f === 'roles') {
+        const key = el.dataset.f;
+        const set = new Set(chars[i][key]);
         if (el.checked) set.add(el.value); else set.delete(el.value);
-        chars[i].secondary = [...set];
+        chars[i][key] = [...set];
       }
     });
 
@@ -203,7 +205,7 @@
 
   const payloadChars = () => chars.map((c) => ({
     name: c.name.trim(), faction: c.faction, race: c.race, class: c.class, ruleset: c.ruleset,
-    prof1: c.prof1, prof2: c.prof2, secondary: c.secondary, role: c.role,
+    prof1: c.prof1, prof2: c.prof2, secondary: c.secondary, roles: c.roles,
   }));
 
   const editLink = (token) => `${location.origin}${location.pathname}?edit=${token}`;
@@ -298,7 +300,7 @@
       store.set(token);
       $('#displayName').value = mine.display_name || '';
       $('#contact').value = mine.contact || '';
-      chars = (mine.characters || []).map((c) => ({ ...emptyChar(), ...c, prof1: c.prof1 || '', prof2: c.prof2 || '', role: c.role || '', secondary: c.secondary || [] }));
+      chars = (mine.characters || []).map((c) => ({ ...emptyChar(), ...c, prof1: c.prof1 || '', prof2: c.prof2 || '', roles: c.roles || [], secondary: c.secondary || [] }));
       if (!chars.length) chars = [emptyChar()];
       setEditMode(true);
       renderEditors();
@@ -341,7 +343,7 @@
         ${sprite('race', D.raceKey(c.faction, c.race), 64, 'portrait')}
         <div class="body">
           <h3>${esc(c.name)}</h3>
-          <p class="sub">${sprite('class', c.class, 20, 'inline')} ${esc(c.race)} ${esc(c.class)}${c.role ? ` · ${esc(c.role)}` : ''}</p>
+          <p class="sub">${sprite('class', c.class, 20, 'inline')} ${esc(c.race)} ${esc(c.class)}${(c.roles || []).length ? ` · ${c.roles.map(esc).join('/')}` : ''}</p>
           <p class="profs">${profs.map((p) => `<span class="tag">${esc(p)}</span>`).join('')}${(c.secondary || []).map((p) => `<span class="tag dim">${esc(p)}</span>`).join('')}</p>
           <p class="owner">Spelare: ${esc(c.player_name)}${c.ruleset !== 'Normal' ? ` · ${sprite('ruleset', c.ruleset, 16, 'inline')} ${esc(c.ruleset)}` : ''}</p>
         </div>
@@ -361,7 +363,7 @@
     const byProf = Object.fromEntries(D.professions.map((p) => [p, 0]));
     roster.forEach((c) => {
       byClass[c.class] = (byClass[c.class] || 0) + 1;
-      if (c.role) byRole[c.role] += 1;
+      (c.roles || []).forEach((r) => { byRole[r] += 1; });
       [c.prof1, c.prof2].filter(Boolean).forEach((p) => { byProf[p] = (byProf[p] || 0) + 1; });
     });
     const missingProfs = D.professions.filter((p) => !byProf[p]);
