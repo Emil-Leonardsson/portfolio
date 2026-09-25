@@ -43,6 +43,16 @@
     if (!c || !sheetDims[c.sheet]) return `<span class="sprite ph ${extraClass}" style="width:${px}px;height:${px}px"></span>`;
     const [nw, nh] = sheetDims[c.sheet];
     const [rw, rh] = D.sheets[c.sheet].ref;
+    if (extraClass.includes('fluid')) {
+      // Skalar med behållaren (upp till px), så bilden växer med knappen.
+      const style = [
+        'width:100%', `max-width:${px}px`, `aspect-ratio:${c.w}/${c.h}`,
+        `background-image:url(${D.sheets[c.sheet].src})`,
+        `background-size:${(rw / c.w) * 100}% ${(rh / c.h) * 100}%`,
+        `background-position:${(c.x / (rw - c.w)) * 100}% ${(c.y / (rh - c.h)) * 100}%`,
+      ].join(';');
+      return `<span class="sprite ${extraClass}" style="${style}" role="img" aria-label="${esc(key)}"></span>`;
+    }
     const sx = nw / rw, sy = nh / rh;
     const scale = px / (c.w * sx);
     const style = [
@@ -85,7 +95,7 @@
     const allowed = race ? race.classes.includes(cls) : false;
     const on = ch.class === cls;
     return `<button type="button" class="pick cls${on ? ' on' : ''}" data-act="class" data-i="${i}" data-class="${cls}"
-      ${allowed ? '' : 'disabled'} title="${cls}" aria-pressed="${on}">${sprite('class', cls, 32)}<span>${cls}</span></button>`;
+      ${allowed ? '' : 'disabled'} title="${cls}" aria-pressed="${on}">${sprite('class', cls, 76, 'fluid')}<span class="lbl">${cls}</span></button>`;
   }
 
   function rulesetButton(i, rs, ch) {
@@ -93,7 +103,7 @@
     const on = ch.ruleset === rs && !off;
     const title = off ? `${D.rulesetInfo[rs]} Finns inte vid launch.` : D.rulesetInfo[rs];
     return `<button type="button" class="pick rs${on ? ' on' : ''}" data-act="ruleset" data-i="${i}" data-ruleset="${rs}"
-      title="${esc(title)}" ${off ? 'disabled' : ''} aria-pressed="${on}">${sprite('ruleset', rs, 40)}<span>${rs}</span>${off ? '<small>Ej vid launch</small>' : ''}</button>`;
+      title="${esc(title)}" ${off ? 'disabled' : ''} aria-pressed="${on}">${sprite('ruleset', rs, 76, 'fluid')}<span>${rs}</span>${off ? '<small>Ej vid launch</small>' : ''}</button>`;
   }
 
   function renderEditors() {
